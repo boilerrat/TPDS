@@ -5,6 +5,7 @@ import {
   buildRowChunks,
   buildRowGroupChunks,
   buildTableChunks,
+  type DocumentTable,
   inferHeaders,
   mergeMultiPageTables,
 } from "../index";
@@ -92,6 +93,34 @@ describe("chunk builders", () => {
     expect(rowIndexes).not.toContain(0);
     expect(rowIndexes).not.toContain(2);
     expect(rowIndexes).toEqual(expect.arrayContaining([1, 3]));
+  });
+
+  it("row chunk builders skip footer rows", () => {
+    const table = {
+      standardVersion: "1.0.0",
+      tableId: "t1",
+      pages: [1],
+      columns: [
+        { colIndex: 0, label: "Item" },
+        { colIndex: 1, label: "Value" },
+      ],
+      rows: [
+        { rowIndex: 0, rowType: "header", cellIds: ["h0", "h1"], page: 1 },
+        { rowIndex: 1, rowType: "body", cellIds: ["b0", "b1"], page: 1 },
+        { rowIndex: 2, rowType: "footer", cellIds: ["f0", "f1"], page: 1 },
+      ],
+      cells: [
+        { cellId: "h0", rowIndex: 0, colIndex: 0, textRaw: "Item", textNormalized: "Item", isHeader: true, page: 1 },
+        { cellId: "h1", rowIndex: 0, colIndex: 1, textRaw: "Value", textNormalized: "Value", isHeader: true, page: 1 },
+        { cellId: "b0", rowIndex: 1, colIndex: 0, textRaw: "Revenue", textNormalized: "Revenue", page: 1 },
+        { cellId: "b1", rowIndex: 1, colIndex: 1, textRaw: "100", textNormalized: "100", page: 1 },
+        { cellId: "f0", rowIndex: 2, colIndex: 0, textRaw: "Total", textNormalized: "Total", isHeader: true, page: 1 },
+        { cellId: "f1", rowIndex: 2, colIndex: 1, textRaw: "100", textNormalized: "100", page: 1 },
+      ],
+    } satisfies DocumentTable;
+
+    expect(buildRowChunks(table).map((chunk) => chunk.rowIndexes)).toEqual([[1]]);
+    expect(buildRowGroupChunks(table, 5).map((chunk) => chunk.rowIndexes)).toEqual([[1]]);
   });
 
   it("buildRowGroupChunks produces ceil(bodyRows/groupSize) chunks with correct rowIndexes", () => {

@@ -51,7 +51,7 @@ export const buildRowChunks = (
   options: BuildRowChunksOptions = {}
 ): TableChunk[] =>
   sortRows(table.rows)
-    .filter((row) => row.rowType !== "header" && row.rowType !== "note")
+    .filter((row) => row.rowType !== "header" && row.rowType !== "footer" && row.rowType !== "note")
     .filter((row) => options.includeRepeatedHeaders || !row.repeatedHeaderRow)
     .map((row) => {
       const serialized = serializeRow(table, row.rowIndex);
