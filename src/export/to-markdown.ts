@@ -21,6 +21,10 @@ const isSimpleMarkdownTable = (table: DocumentTable): boolean => {
     return false;
   }
 
+  if (maxColumnIndex(table) + 1 >= 10) {
+    return false;
+  }
+
   const headerRows = table.rows.filter((row) => row.rowType === "header" && !row.repeatedHeaderRow);
   return headerRows.length <= 1;
 };
@@ -106,6 +110,11 @@ export const tableToMarkdown = (table: DocumentTable): MarkdownExportResult => {
   lines.push(`| ${headerValues.join(" | ")} |`);
   lines.push(`| ${headerValues.map(() => "---").join(" | ")} |`);
   lines.push(...bodyValues.map((row) => `| ${row.join(" | ")} |`));
+
+  if (table.footnotes && table.footnotes.length > 0) {
+    lines.push("");
+    lines.push(...table.footnotes.map((f) => `_${f}_`));
+  }
 
   return {
     markdown: lines.join("\n"),
