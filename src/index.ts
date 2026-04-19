@@ -53,6 +53,8 @@ export type { NormalizeTableOptions } from "./normalize/normalize-table";
 export { normalizeTable } from "./normalize/normalize-table";
 export type { FlatArrayAdapterOptions } from "./adapters/from-flat-array";
 export { normalizeFromFlatArray } from "./adapters/from-flat-array";
+export type { NormalizeDoclingOptions } from "./adapters/from-docling";
+export { normalizeFromDocling } from "./adapters/from-docling";
 
 import { documentTableSchema } from "./schema/zod";
 import type { DocumentTable } from "./types/table";
