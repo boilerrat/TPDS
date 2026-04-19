@@ -55,6 +55,8 @@ export type { FlatArrayAdapterOptions } from "./adapters/from-flat-array";
 export { normalizeFromFlatArray } from "./adapters/from-flat-array";
 export type { NormalizeDoclingOptions } from "./adapters/from-docling";
 export { normalizeFromDocling } from "./adapters/from-docling";
+export type { NormalizeMarkerOptions } from "./adapters/from-marker";
+export { normalizeFromMarker } from "./adapters/from-marker";
 
 import { documentTableSchema } from "./schema/zod";
 import type { DocumentTable } from "./types/table";

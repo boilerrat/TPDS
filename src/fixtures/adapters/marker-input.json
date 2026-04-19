@@ -1,0 +1,101 @@
+{
+  "id": "/page/1/Table/0",
+  "block_type": "Table",
+  "html": "<table><tr><th>Product</th><th>Q1 Revenue</th><th>Q2 Revenue</th></tr><tr><td rowspan=\"2\">Widget A</td><td>100</td><td>200</td></tr><tr><td colspan=\"2\">950</td></tr></table>",
+  "polygon": [[72.0, 150.0], [540.0, 150.0], [540.0, 400.0], [72.0, 400.0]],
+  "bbox": [72.0, 150.0, 468.0, 250.0],
+  "section_hierarchy": { "1": "Financial Results" },
+  "children": [
+    {
+      "id": "/page/1/TableCell/0",
+      "block_type": "TableCell",
+      "html": "<th>Product</th>",
+      "polygon": [[72.0, 150.0], [200.0, 150.0], [200.0, 175.0], [72.0, 175.0]],
+      "bbox": [72.0, 150.0, 128.0, 25.0],
+      "row_id": 0,
+      "col_id": 0,
+      "rowspan": 1,
+      "colspan": 1,
+      "is_header": true,
+      "text_lines": ["Product"]
+    },
+    {
+      "id": "/page/1/TableCell/1",
+      "block_type": "TableCell",
+      "html": "<th>Q1 Revenue</th>",
+      "polygon": [[200.0, 150.0], [370.0, 150.0], [370.0, 175.0], [200.0, 175.0]],
+      "bbox": [200.0, 150.0, 170.0, 25.0],
+      "row_id": 0,
+      "col_id": 1,
+      "rowspan": 1,
+      "colspan": 1,
+      "is_header": true,
+      "text_lines": ["Q1 Revenue"]
+    },
+    {
+      "id": "/page/1/TableCell/2",
+      "block_type": "TableCell",
+      "html": "<th>Q2 Revenue</th>",
+      "polygon": [[370.0, 150.0], [540.0, 150.0], [540.0, 175.0], [370.0, 175.0]],
+      "bbox": [370.0, 150.0, 170.0, 25.0],
+      "row_id": 0,
+      "col_id": 2,
+      "rowspan": 1,
+      "colspan": 1,
+      "is_header": true,
+      "text_lines": ["Q2 Revenue"]
+    },
+    {
+      "id": "/page/1/TableCell/3",
+      "block_type": "TableCell",
+      "html": "<td rowspan=\"2\">Widget A</td>",
+      "polygon": [[72.0, 175.0], [200.0, 175.0], [200.0, 225.0], [72.0, 225.0]],
+      "bbox": [72.0, 175.0, 128.0, 50.0],
+      "row_id": 1,
+      "col_id": 0,
+      "rowspan": 2,
+      "colspan": 1,
+      "is_header": false,
+      "text_lines": ["Widget A"]
+    },
+    {
+      "id": "/page/1/TableCell/4",
+      "block_type": "TableCell",
+      "html": "<td>100</td>",
+      "polygon": [[200.0, 175.0], [370.0, 175.0], [370.0, 200.0], [200.0, 200.0]],
+      "bbox": [200.0, 175.0, 170.0, 25.0],
+      "row_id": 1,
+      "col_id": 1,
+      "rowspan": 1,
+      "colspan": 1,
+      "is_header": false,
+      "text_lines": ["100"]
+    },
+    {
+      "id": "/page/1/TableCell/5",
+      "block_type": "TableCell",
+      "html": "<td>200</td>",
+      "polygon": [[370.0, 175.0], [540.0, 175.0], [540.0, 200.0], [370.0, 200.0]],
+      "bbox": [370.0, 175.0, 170.0, 25.0],
+      "row_id": 1,
+      "col_id": 2,
+      "rowspan": 1,
+      "colspan": 1,
+      "is_header": false,
+      "text_lines": ["200"]
+    },
+    {
+      "id": "/page/1/TableCell/6",
+      "block_type": "TableCell",
+      "html": "<td colspan=\"2\">950</td>",
+      "polygon": [[200.0, 200.0], [540.0, 200.0], [540.0, 225.0], [200.0, 225.0]],
+      "bbox": [200.0, 200.0, 340.0, 25.0],
+      "row_id": 2,
+      "col_id": 1,
+      "rowspan": 1,
+      "colspan": 2,
+      "is_header": false,
+      "text_lines": ["950"]
+    }
+  ]
+}
