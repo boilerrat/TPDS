@@ -51,6 +51,8 @@ export type { MergeMultiPageTablesOptions } from "./normalize/merge-multipage";
 export { mergeMultiPageTables } from "./normalize/merge-multipage";
 export type { NormalizeTableOptions } from "./normalize/normalize-table";
 export { normalizeTable } from "./normalize/normalize-table";
+export type { FlatArrayAdapterOptions } from "./adapters/from-flat-array";
+export { normalizeFromFlatArray } from "./adapters/from-flat-array";
 
 import { documentTableSchema } from "./schema/zod";
 import type { DocumentTable } from "./types/table";
