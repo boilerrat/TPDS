@@ -16,7 +16,8 @@
   },
   "files": [
     "dist",
-    "README.md"
+    "README.md",
+    "src/schema/json-schema.json"
   ],
   "sideEffects": false,
   "engines": {
@@ -27,7 +28,9 @@
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
     "test": "vitest run",
-    "smoke": "node test/smoke/esm.mjs && node test/smoke/cjs.cjs"
+    "smoke": "node test/smoke/esm.mjs && node test/smoke/cjs.cjs",
+    "generate-schema": "node scripts/generate-schema.mjs",
+    "validate-schema": "node scripts/validate-fixtures.mjs"
   },
   "keywords": [
     "tables",
@@ -43,6 +46,8 @@
   },
   "devDependencies": {
     "@types/node": "^24.6.0",
+    "ajv": "^8.18.0",
+    "ajv-formats": "^3.0.1",
     "tsup": "^8.5.0",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"

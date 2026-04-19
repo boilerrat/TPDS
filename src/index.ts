@@ -58,3 +58,5 @@ import type { DocumentTable } from "./types/table";
 export const validateTable = (input: unknown): DocumentTable => documentTableSchema.parse(input);
 
 export const safeValidateTable = (input: unknown) => documentTableSchema.safeParse(input);
+
+export { default as documentTableJsonSchema } from "./schema/json-schema.json";

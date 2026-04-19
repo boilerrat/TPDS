@@ -1,3 +1,4 @@
+import { copyFileSync } from "fs";
 import { defineConfig } from "tsup";
 
 export default defineConfig({
@@ -6,5 +7,9 @@ export default defineConfig({
   dts: true,
   sourcemap: true,
   clean: true,
-  target: "node18"
+  target: "node18",
+  onSuccess: async () => {
+    copyFileSync("src/schema/json-schema.json", "dist/schema.json");
+    console.log("Copied src/schema/json-schema.json → dist/schema.json");
+  }
 });
