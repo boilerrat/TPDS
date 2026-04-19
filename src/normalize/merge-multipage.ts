@@ -14,7 +14,14 @@ const mergeKey = (table: DocumentTable, options: MergeMultiPageTablesOptions): s
   }
 
   const docId = table.sourceDocumentId ?? "unknown-doc";
-  const title = options.mergeByTitle === false ? table.tableId : normalizeText(table.title ?? table.caption ?? "");
+  const title = options.mergeByTitle === false
+    ? ""
+    : normalizeText(table.title ?? "") || normalizeText(table.caption ?? "");
+
+  if (!title) {
+    return `${docId}:${table.tableId}`;
+  }
+
   const columns = table.columns.map((column) => normalizeText(column.label ?? String(column.colIndex))).join("|");
   return `${docId}:${title}:${columns}`;
 };
