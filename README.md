@@ -123,4 +123,20 @@ npm install
 npm run lint
 npm test
 npm run build
+npm run smoke   # smoke-test ESM + CJS output against dist/
 ```
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for the full versioning policy and workflow.
+
+### Publishing
+
+Releases are published automatically when a `v*.*.*` tag is pushed. The
+`.github/workflows/publish.yml` workflow runs lint, tests, build, and smoke
+tests before calling `npm publish`.
+
+To authorize the workflow you must add an **`NPM_TOKEN`** secret to the
+repository (`Settings → Secrets and variables → Actions → New repository
+secret`). Generate the token at npmjs.com under `Access Tokens → Granular
+Access Token` with **Read and Write** permission for this package.
