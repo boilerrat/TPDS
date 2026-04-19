@@ -10,7 +10,13 @@ describe("fixtures", () => {
       "simple-table",
       "merged-cells-table",
       "multipage-table",
-      "broken-markdown-case"
+      "broken-markdown-case",
+      "footnotes-table",
+      "wide-table",
+      "ocr-noisy-table",
+      "repeated-headers-table",
+      "financial-table",
+      "nested-headers-table"
     ]) {
       const fixture = loadFixture(fixtureName);
       expect(() => documentTableSchema.parse(fixture)).not.toThrow();

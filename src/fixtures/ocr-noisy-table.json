@@ -1,0 +1,56 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "ocr-noisy-table",
+  "sourceDocumentId": "doc-scanned-report-1998",
+  "sourceFileName": "scanned-annual-report.pdf",
+  "title": "Annual Production Figures",
+  "caption": "OCR-extracted table with common artefacts corrected in textNormalized.",
+  "sectionPath": ["Production", "Annual Summary"],
+  "notes": ["textRaw preserves raw OCR output; textNormalized contains human-corrected values."],
+  "pages": [3],
+  "columns": [
+    { "colIndex": 0, "label": "Year" },
+    { "colIndex": 1, "label": "Units Produced" },
+    { "colIndex": 2, "label": "Defect Rate", "units": "percent" },
+    { "colIndex": 3, "label": "Revenue", "units": "USD thousands" },
+    { "colIndex": 4, "label": "Region" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0","h1","h2","h3","h4"], "page": 3 },
+    { "rowIndex": 1, "rowType": "body", "cellIds": ["r1c0","r1c1","r1c2","r1c3","r1c4"], "page": 3 },
+    { "rowIndex": 2, "rowType": "body", "cellIds": ["r2c0","r2c1","r2c2","r2c3","r2c4"], "page": 3 },
+    { "rowIndex": 3, "rowType": "body", "cellIds": ["r3c0","r3c1","r3c2","r3c3","r3c4"], "page": 3 },
+    { "rowIndex": 4, "rowType": "body", "cellIds": ["r4c0","r4c1","r4c2","r4c3","r4c4"], "page": 3 }
+  ],
+  "cells": [
+    { "cellId": "h0", "rowIndex": 0, "colIndex": 0, "textRaw": "Year", "textNormalized": "Year", "isHeader": true, "page": 3 },
+    { "cellId": "h1", "rowIndex": 0, "colIndex": 1, "textRaw": "Units Pr0duced", "textNormalized": "Units Produced", "isHeader": true, "page": 3 },
+    { "cellId": "h2", "rowIndex": 0, "colIndex": 2, "textRaw": "Defect Rate (%)", "textNormalized": "Defect Rate (%)", "isHeader": true, "page": 3 },
+    { "cellId": "h3", "rowIndex": 0, "colIndex": 3, "textRaw": "Revenue (USD K)", "textNormalized": "Revenue (USD K)", "isHeader": true, "page": 3 },
+    { "cellId": "h4", "rowIndex": 0, "colIndex": 4, "textRaw": "Regi0n", "textNormalized": "Region", "isHeader": true, "page": 3 },
+    { "cellId": "r1c0", "rowIndex": 1, "colIndex": 0, "textRaw": "l998", "textNormalized": "1998", "page": 3 },
+    { "cellId": "r1c1", "rowIndex": 1, "colIndex": 1, "textRaw": "l2,450", "textNormalized": "12450", "valueType": "number", "page": 3 },
+    { "cellId": "r1c2", "rowIndex": 1, "colIndex": 2, "textRaw": "2.l%", "textNormalized": "2.1%", "valueType": "percent", "units": "percent", "page": 3 },
+    { "cellId": "r1c3", "rowIndex": 1, "colIndex": 3, "textRaw": "$4,8O2", "textNormalized": "4802", "valueType": "currency", "units": "USD thousands", "page": 3 },
+    { "cellId": "r1c4", "rowIndex": 1, "colIndex": 4, "textRaw": "N0rth Am.", "textNormalized": "North America", "page": 3 },
+    { "cellId": "r2c0", "rowIndex": 2, "colIndex": 0, "textRaw": "l999", "textNormalized": "1999", "page": 3 },
+    { "cellId": "r2c1", "rowIndex": 2, "colIndex": 1, "textRaw": "l4,1l0", "textNormalized": "14110", "valueType": "number", "page": 3 },
+    { "cellId": "r2c2", "rowIndex": 2, "colIndex": 2, "textRaw": "l.8%", "textNormalized": "1.8%", "valueType": "percent", "units": "percent", "page": 3 },
+    { "cellId": "r2c3", "rowIndex": 2, "colIndex": 3, "textRaw": "$5,4l8", "textNormalized": "5418", "valueType": "currency", "units": "USD thousands", "page": 3 },
+    { "cellId": "r2c4", "rowIndex": 2, "colIndex": 4, "textRaw": "N0rth Am.", "textNormalized": "North America", "page": 3 },
+    { "cellId": "r3c0", "rowIndex": 3, "colIndex": 0, "textRaw": "2OOO", "textNormalized": "2000", "page": 3 },
+    { "cellId": "r3c1", "rowIndex": 3, "colIndex": 1, "textRaw": "l5,88O", "textNormalized": "15880", "valueType": "number", "page": 3 },
+    { "cellId": "r3c2", "rowIndex": 3, "colIndex": 2, "textRaw": "l.5%", "textNormalized": "1.5%", "valueType": "percent", "units": "percent", "page": 3 },
+    { "cellId": "r3c3", "rowIndex": 3, "colIndex": 3, "textRaw": "$6,2l2", "textNormalized": "6212", "valueType": "currency", "units": "USD thousands", "page": 3 },
+    { "cellId": "r3c4", "rowIndex": 3, "colIndex": 4, "textRaw": "Eur0pe", "textNormalized": "Europe", "page": 3 },
+    { "cellId": "r4c0", "rowIndex": 4, "colIndex": 0, "textRaw": "2OOl", "textNormalized": "2001", "page": 3 },
+    { "cellId": "r4c1", "rowIndex": 4, "colIndex": 1, "textRaw": "l3,22O", "textNormalized": "13220", "valueType": "number", "page": 3 },
+    { "cellId": "r4c2", "rowIndex": 4, "colIndex": 2, "textRaw": "2.4%", "textNormalized": "2.4%", "valueType": "percent", "units": "percent", "page": 3 },
+    { "cellId": "r4c3", "rowIndex": 4, "colIndex": 3, "textRaw": "$5,O45", "textNormalized": "5045", "valueType": "currency", "units": "USD thousands", "page": 3 },
+    { "cellId": "r4c4", "rowIndex": 4, "colIndex": 4, "textRaw": "Eur0pe", "textNormalized": "Europe", "page": 3 }
+  ],
+  "provenance": [
+    { "step": "ocr-extraction", "tool": "tesseract", "version": "4.1.1", "timestamp": "2026-04-18T00:00:00Z" },
+    { "step": "ocr-correction", "tool": "manual", "version": "1.0.0", "timestamp": "2026-04-18T00:00:00Z" }
+  ]
+}
