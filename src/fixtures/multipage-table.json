@@ -1,0 +1,42 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "multipage-table",
+  "sourceDocumentId": "doc-supply-chain",
+  "title": "Shipment Delays by Port",
+  "caption": "Continuation table across two pages.",
+  "sectionPath": ["Operations", "Shipping"],
+  "notes": ["Repeated header rows on continuation pages should not become new logical data rows."],
+  "pages": [20, 21],
+  "pageSpans": [{ "page": 20 }, { "page": 21 }],
+  "columns": [
+    { "colIndex": 0, "label": "Port" },
+    { "colIndex": 1, "label": "Average Delay" },
+    { "colIndex": 2, "label": "Primary Cause" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0", "h1", "h2"], "page": 20 },
+    { "rowIndex": 1, "rowType": "body", "cellIds": ["r1c0", "r1c1", "r1c2"], "page": 20 },
+    { "rowIndex": 2, "rowType": "header", "cellIds": ["h3", "h4", "h5"], "page": 21, "repeatedHeaderRow": true },
+    { "rowIndex": 3, "rowType": "body", "cellIds": ["r3c0", "r3c1", "r3c2"], "page": 21 }
+  ],
+  "cells": [
+    { "cellId": "h0", "rowIndex": 0, "colIndex": 0, "textRaw": "Port", "textNormalized": "Port", "isHeader": true, "page": 20 },
+    { "cellId": "h1", "rowIndex": 0, "colIndex": 1, "textRaw": "Average Delay", "textNormalized": "Average Delay", "isHeader": true, "page": 20 },
+    { "cellId": "h2", "rowIndex": 0, "colIndex": 2, "textRaw": "Primary Cause", "textNormalized": "Primary Cause", "isHeader": true, "page": 20 },
+    { "cellId": "r1c0", "rowIndex": 1, "colIndex": 0, "textRaw": "Halifax", "textNormalized": "Halifax", "page": 20 },
+    { "cellId": "r1c1", "rowIndex": 1, "colIndex": 1, "textRaw": "3 days", "textNormalized": "3 days", "page": 20 },
+    { "cellId": "r1c2", "rowIndex": 1, "colIndex": 2, "textRaw": "Weather", "textNormalized": "Weather", "page": 20 },
+    { "cellId": "h3", "rowIndex": 2, "colIndex": 0, "textRaw": "Port", "textNormalized": "Port", "isHeader": true, "page": 21 },
+    { "cellId": "h4", "rowIndex": 2, "colIndex": 1, "textRaw": "Average Delay", "textNormalized": "Average Delay", "isHeader": true, "page": 21 },
+    { "cellId": "h5", "rowIndex": 2, "colIndex": 2, "textRaw": "Primary Cause", "textNormalized": "Primary Cause", "isHeader": true, "page": 21 },
+    { "cellId": "r3c0", "rowIndex": 3, "colIndex": 0, "textRaw": "Montreal", "textNormalized": "Montreal", "page": 21 },
+    { "cellId": "r3c1", "rowIndex": 3, "colIndex": 1, "textRaw": "5 days", "textNormalized": "5 days", "page": 21 },
+    { "cellId": "r3c2", "rowIndex": 3, "colIndex": 2, "textRaw": "Labor disruption", "textNormalized": "Labor disruption", "page": 21 }
+  ],
+  "continuity": {
+    "isMultiPage": true,
+    "logicalTableGroupId": "shipment-delays",
+    "continuesOnNextPage": false,
+    "continuedFromPreviousPage": false
+  }
+}

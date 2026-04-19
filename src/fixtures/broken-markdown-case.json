@@ -1,0 +1,36 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "broken-markdown-case",
+  "title": "Clinical Trial Outcomes",
+  "caption": "Complex nested headers and merged cells that cannot be represented as a simple pipe table.",
+  "sectionPath": ["Appendix", "Study Results"],
+  "footnotes": ["Responder rate excludes incomplete records."],
+  "pages": [31],
+  "columns": [
+    { "colIndex": 0, "label": "Cohort" },
+    { "colIndex": 1, "label": "Week 12 Response" },
+    { "colIndex": 2, "label": "Week 24 Response" },
+    { "colIndex": 3, "label": "Safety Notes" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0", "h1", "h2"], "page": 31 },
+    { "rowIndex": 1, "rowType": "header", "cellIds": ["h3", "h4", "h5", "h6"], "page": 31 },
+    { "rowIndex": 2, "rowType": "body", "cellIds": ["r2c0", "r2c1", "r2c2", "r2c3"], "page": 31 }
+  ],
+  "cells": [
+    { "cellId": "h0", "rowIndex": 0, "colIndex": 0, "textRaw": "Cohort", "textNormalized": "Cohort", "isHeader": true, "rowSpan": 2, "page": 31 },
+    { "cellId": "h1", "rowIndex": 0, "colIndex": 1, "textRaw": "Response Rate", "textNormalized": "Response Rate", "isHeader": true, "colSpan": 2, "page": 31 },
+    { "cellId": "h2", "rowIndex": 0, "colIndex": 3, "textRaw": "Safety", "textNormalized": "Safety", "isHeader": true, "rowSpan": 2, "page": 31 },
+    { "cellId": "h3", "rowIndex": 1, "colIndex": 0, "textRaw": "", "textNormalized": "", "isHeader": true, "page": 31 },
+    { "cellId": "h4", "rowIndex": 1, "colIndex": 1, "textRaw": "Week 12", "textNormalized": "Week 12", "isHeader": true, "page": 31 },
+    { "cellId": "h5", "rowIndex": 1, "colIndex": 2, "textRaw": "Week 24", "textNormalized": "Week 24", "isHeader": true, "page": 31 },
+    { "cellId": "h6", "rowIndex": 1, "colIndex": 3, "textRaw": "", "textNormalized": "", "isHeader": true, "page": 31 },
+    { "cellId": "r2c0", "rowIndex": 2, "colIndex": 0, "textRaw": "Dose A", "textNormalized": "Dose A", "page": 31 },
+    { "cellId": "r2c1", "rowIndex": 2, "colIndex": 1, "textRaw": "61%", "textNormalized": "61%", "page": 31, "valueType": "percent" },
+    { "cellId": "r2c2", "rowIndex": 2, "colIndex": 2, "textRaw": "58%", "textNormalized": "58%", "page": 31, "valueType": "percent" },
+    { "cellId": "r2c3", "rowIndex": 2, "colIndex": 3, "textRaw": "Mild nausea", "textNormalized": "Mild nausea", "page": 31 }
+  ],
+  "headerGroups": [
+    { "groupId": "response-rate", "label": "Response Rate", "level": 0, "colStart": 1, "colEnd": 2 }
+  ]
+}

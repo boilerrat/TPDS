@@ -1,0 +1,34 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "merged-cells-table",
+  "title": "Employee Counts by Department",
+  "caption": "Department totals with merged top-level grouping headers.",
+  "sectionPath": ["Operations", "Workforce"],
+  "pages": [8],
+  "columns": [
+    { "colIndex": 0, "label": "Department" },
+    { "colIndex": 1, "label": "Full Time" },
+    { "colIndex": 2, "label": "Contract" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["g0", "g1"], "page": 8 },
+    { "rowIndex": 1, "rowType": "header", "cellIds": ["h0", "h1", "h2"], "page": 8 },
+    { "rowIndex": 2, "rowType": "body", "cellIds": ["r2c0", "r2c1", "r2c2"], "page": 8 }
+  ],
+  "cells": [
+    { "cellId": "g0", "rowIndex": 0, "colIndex": 0, "textRaw": "Department", "textNormalized": "Department", "isHeader": true, "rowSpan": 2, "page": 8 },
+    { "cellId": "g1", "rowIndex": 0, "colIndex": 1, "textRaw": "Headcount", "textNormalized": "Headcount", "isHeader": true, "colSpan": 2, "page": 8 },
+    { "cellId": "h0", "rowIndex": 1, "colIndex": 0, "textRaw": "", "textNormalized": "", "isHeader": true, "page": 8 },
+    { "cellId": "h1", "rowIndex": 1, "colIndex": 1, "textRaw": "Full Time", "textNormalized": "Full Time", "isHeader": true, "page": 8 },
+    { "cellId": "h2", "rowIndex": 1, "colIndex": 2, "textRaw": "Contract", "textNormalized": "Contract", "isHeader": true, "page": 8 },
+    { "cellId": "r2c0", "rowIndex": 2, "colIndex": 0, "textRaw": "Engineering", "textNormalized": "Engineering", "page": 8 },
+    { "cellId": "r2c1", "rowIndex": 2, "colIndex": 1, "textRaw": "82", "textNormalized": "82", "page": 8, "valueType": "number" },
+    { "cellId": "r2c2", "rowIndex": 2, "colIndex": 2, "textRaw": "14", "textNormalized": "14", "page": 8, "valueType": "number" }
+  ],
+  "headerGroups": [
+    { "groupId": "headcount", "label": "Headcount", "level": 0, "colStart": 1, "colEnd": 2 }
+  ],
+  "continuity": {
+    "isMultiPage": false
+  }
+}
