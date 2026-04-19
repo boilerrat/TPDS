@@ -61,3 +61,7 @@ src/
 ### Build output
 
 `tsup` emits dual ESM (`dist/index.js`) + CJS (`dist/index.cjs`) with `.d.ts` declarations. `src/index.ts` is the only entry point.
+
+### Session Start
+
+Every session begins by implementing /caveman and /token-efficiency
