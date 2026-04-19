@@ -33,7 +33,8 @@
     "test": "vitest run",
     "smoke": "node test/smoke/esm.mjs && node test/smoke/cjs.cjs",
     "generate-schema": "node scripts/generate-schema.mjs",
-    "validate-schema": "node scripts/validate-fixtures.mjs"
+    "validate-schema": "node scripts/validate-fixtures.mjs",
+    "benchmark": "tsx scripts/benchmark.mts"
   },
   "keywords": [
     "tables",
@@ -52,6 +53,7 @@
     "ajv": "^8.18.0",
     "ajv-formats": "^3.0.1",
     "tsup": "^8.5.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3",
     "vitest": "^3.2.4"
   }
