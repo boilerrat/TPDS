@@ -26,7 +26,8 @@
     "build": "tsup",
     "clean": "rm -rf dist",
     "lint": "tsc --noEmit",
-    "test": "vitest run"
+    "test": "vitest run",
+    "smoke": "node test/smoke/esm.mjs && node test/smoke/cjs.cjs"
   },
   "keywords": [
     "tables",
