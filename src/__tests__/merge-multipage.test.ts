@@ -113,6 +113,23 @@ describe("mergeMultiPageTables", () => {
     expect(result).toHaveLength(2);
   });
 
+  it("does not merge unrelated untitled tables that only share document and columns", () => {
+    const page1 = makeTable("untitled-1", "doc-h", "", [1], {
+      title: undefined,
+      caption: undefined,
+      columns: [{ colIndex: 0 }, { colIndex: 1 }],
+    });
+    const page2 = makeTable("untitled-2", "doc-h", "", [2], {
+      title: undefined,
+      caption: undefined,
+      columns: [{ colIndex: 0 }, { colIndex: 1 }],
+    });
+
+    const result = mergeMultiPageTables([page1, page2]);
+
+    expect(result).toHaveLength(2);
+  });
+
   it("does not merge title-matching tables when mergeByTitle is false", () => {
     const t1 = makeTable("opt-1", "doc-g", "Summary", [1]);
     const t2 = makeTable("opt-2", "doc-g", "Summary", [2]);
