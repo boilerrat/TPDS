@@ -1,0 +1,239 @@
+{
+  "self_ref": "#/tables/0",
+  "parent": { "$ref": "#/body" },
+  "children": [],
+  "content_layer": "body",
+  "label": "table",
+  "prov": [
+    {
+      "page_no": 2,
+      "bbox": { "l": 72.0, "t": 150.0, "r": 540.0, "b": 400.0, "coord_origin": "BOTTOMLEFT" },
+      "charspan": [0, 0]
+    }
+  ],
+  "captions": [{ "$ref": "#/texts/3" }],
+  "references": [],
+  "footnotes": [],
+  "data": {
+    "table_cells": [
+      {
+        "text": "Product",
+        "bbox": null,
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "text": "Q1 Revenue",
+        "bbox": null,
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "text": "Q2 Revenue",
+        "bbox": null,
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 0,
+        "end_row_offset_idx": 1,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "column_header": true,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "text": "Widget A",
+        "bbox": null,
+        "row_span": 2,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 0,
+        "end_col_offset_idx": 1,
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "text": "1200",
+        "bbox": null,
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 2,
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "text": "1500",
+        "bbox": null,
+        "row_span": 1,
+        "col_span": 1,
+        "start_row_offset_idx": 1,
+        "end_row_offset_idx": 2,
+        "start_col_offset_idx": 2,
+        "end_col_offset_idx": 3,
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      },
+      {
+        "text": "950",
+        "bbox": null,
+        "row_span": 1,
+        "col_span": 2,
+        "start_row_offset_idx": 2,
+        "end_row_offset_idx": 3,
+        "start_col_offset_idx": 1,
+        "end_col_offset_idx": 3,
+        "column_header": false,
+        "row_header": false,
+        "row_section": false
+      }
+    ],
+    "num_rows": 3,
+    "num_cols": 3,
+    "grid": [
+      [
+        {
+          "text": "Product",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false
+        },
+        {
+          "text": "Q1 Revenue",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false
+        },
+        {
+          "text": "Q2 Revenue",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 0,
+          "end_row_offset_idx": 1,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": true,
+          "row_header": false,
+          "row_section": false
+        }
+      ],
+      [
+        {
+          "text": "Widget A",
+          "bbox": null,
+          "row_span": 2,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false
+        },
+        {
+          "text": "1200",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 2,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false
+        },
+        {
+          "text": "1500",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 2,
+          "start_col_offset_idx": 2,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false
+        }
+      ],
+      [
+        {
+          "text": "Widget A",
+          "bbox": null,
+          "row_span": 2,
+          "col_span": 1,
+          "start_row_offset_idx": 1,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 0,
+          "end_col_offset_idx": 1,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false
+        },
+        {
+          "text": "950",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 2,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false
+        },
+        {
+          "text": "950",
+          "bbox": null,
+          "row_span": 1,
+          "col_span": 2,
+          "start_row_offset_idx": 2,
+          "end_row_offset_idx": 3,
+          "start_col_offset_idx": 1,
+          "end_col_offset_idx": 3,
+          "column_header": false,
+          "row_header": false,
+          "row_section": false
+        }
+      ]
+    ]
+  }
+}
