@@ -14,6 +14,7 @@ export const buildRowGroupChunks = (
   const targetRows = sortRows(table.rows).filter(
     (row) =>
       row.rowType !== "header" &&
+      row.rowType !== "footer" &&
       row.rowType !== "note" &&
       (includeRepeatedHeaders || !row.repeatedHeaderRow)
   );
