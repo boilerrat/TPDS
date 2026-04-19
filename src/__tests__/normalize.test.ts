@@ -16,7 +16,9 @@ describe("fixtures", () => {
       "ocr-noisy-table",
       "repeated-headers-table",
       "financial-table",
-      "nested-headers-table"
+      "nested-headers-table",
+      "wage-schedule-colspan",
+      "wage-schedule-rowspan"
     ]) {
       const fixture = loadFixture(fixtureName);
       expect(() => documentTableSchema.parse(fixture)).not.toThrow();
