@@ -62,6 +62,14 @@ export type TableContinuity = {
   logicalTableGroupId?: string;
 };
 
+export type FidelityWarning =
+  | "merged-cells-present"
+  | "headers-inferred"
+  | "markdown-lossy"
+  | "repeated-headers-detected"
+  | "ocr-noise-suspected"
+  | "multi-page-merged";
+
 export type DocumentTable = {
   standardVersion: string;
   tableId: string;
@@ -81,4 +89,5 @@ export type DocumentTable = {
   metadata?: JsonRecord;
   continuity?: TableContinuity;
   provenance?: Provenance[];
+  fidelityWarnings?: FidelityWarning[];
 };

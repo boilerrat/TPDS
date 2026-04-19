@@ -16,6 +16,7 @@ export type {
 } from "./types/common";
 export type {
   DocumentTable,
+  FidelityWarning,
   HeaderGroup,
   PageSpan,
   TableCell,
@@ -27,6 +28,7 @@ export {
   boundingBoxSchema,
   continuitySchema,
   documentTableSchema,
+  fidelityWarningSchema,
   headerGroupSchema,
   pageSpanSchema,
   provenanceSchema,
@@ -43,6 +45,7 @@ export { buildRowGroupChunks, buildTableChunks } from "./chunk/build-table-chunk
 export { tableToHtml } from "./export/to-html";
 export { tableToJson } from "./export/to-json";
 export { tableToMarkdown } from "./export/to-markdown";
+export { addFidelityWarnings } from "./utils/fidelity-warnings";
 export { inferHeaders } from "./normalize/infer-headers";
 export type { MergeMultiPageTablesOptions } from "./normalize/merge-multipage";
 export { mergeMultiPageTables } from "./normalize/merge-multipage";
