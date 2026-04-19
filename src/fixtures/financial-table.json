@@ -1,0 +1,82 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "financial-table",
+  "sourceDocumentId": "doc-annual-financials-2024",
+  "sourceFileName": "annual-report-2024.pdf",
+  "title": "Consolidated Income Statement",
+  "caption": "Full-year 2024 vs 2023 with growth metrics.",
+  "sectionPath": ["Financial Statements", "Income Statement"],
+  "notes": [
+    "All figures in USD millions unless stated.",
+    "YoY growth calculated from rounded figures."
+  ],
+  "footnotes": [
+    "* EBITDA excludes stock-based compensation.",
+    "† Operating margin calculated before restructuring charges."
+  ],
+  "pages": [42],
+  "columns": [
+    { "colIndex": 0, "label": "Line Item" },
+    { "colIndex": 1, "label": "FY 2024", "units": "USD millions" },
+    { "colIndex": 2, "label": "FY 2023", "units": "USD millions" },
+    { "colIndex": 3, "label": "Change", "units": "USD millions" },
+    { "colIndex": 4, "label": "YoY Growth", "units": "percent" },
+    { "colIndex": 5, "label": "Margin 2024", "units": "percent" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0","h1","h2","h3","h4","h5"], "page": 42 },
+    { "rowIndex": 1, "rowType": "body", "cellIds": ["r1c0","r1c1","r1c2","r1c3","r1c4","r1c5"], "page": 42 },
+    { "rowIndex": 2, "rowType": "body", "cellIds": ["r2c0","r2c1","r2c2","r2c3","r2c4","r2c5"], "page": 42 },
+    { "rowIndex": 3, "rowType": "body", "cellIds": ["r3c0","r3c1","r3c2","r3c3","r3c4","r3c5"], "page": 42 },
+    { "rowIndex": 4, "rowType": "body", "cellIds": ["r4c0","r4c1","r4c2","r4c3","r4c4","r4c5"], "page": 42 },
+    { "rowIndex": 5, "rowType": "body", "cellIds": ["r5c0","r5c1","r5c2","r5c3","r5c4","r5c5"], "page": 42 },
+    { "rowIndex": 6, "rowType": "footer", "cellIds": ["r6c0","r6c1","r6c2","r6c3","r6c4","r6c5"], "page": 42 }
+  ],
+  "cells": [
+    { "cellId": "h0", "rowIndex": 0, "colIndex": 0, "textRaw": "Line Item", "textNormalized": "Line Item", "isHeader": true, "page": 42 },
+    { "cellId": "h1", "rowIndex": 0, "colIndex": 1, "textRaw": "FY 2024 ($M)", "textNormalized": "FY 2024 ($M)", "isHeader": true, "page": 42 },
+    { "cellId": "h2", "rowIndex": 0, "colIndex": 2, "textRaw": "FY 2023 ($M)", "textNormalized": "FY 2023 ($M)", "isHeader": true, "page": 42 },
+    { "cellId": "h3", "rowIndex": 0, "colIndex": 3, "textRaw": "Change ($M)", "textNormalized": "Change ($M)", "isHeader": true, "page": 42 },
+    { "cellId": "h4", "rowIndex": 0, "colIndex": 4, "textRaw": "YoY Growth", "textNormalized": "YoY Growth", "isHeader": true, "page": 42 },
+    { "cellId": "h5", "rowIndex": 0, "colIndex": 5, "textRaw": "Margin 2024", "textNormalized": "Margin 2024", "isHeader": true, "page": 42 },
+    { "cellId": "r1c0", "rowIndex": 1, "colIndex": 0, "textRaw": "Total Revenue", "textNormalized": "Total Revenue", "page": 42 },
+    { "cellId": "r1c1", "rowIndex": 1, "colIndex": 1, "textRaw": "$4,821.3", "textNormalized": "4821.3", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r1c2", "rowIndex": 1, "colIndex": 2, "textRaw": "$4,102.7", "textNormalized": "4102.7", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r1c3", "rowIndex": 1, "colIndex": 3, "textRaw": "$718.6", "textNormalized": "718.6", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r1c4", "rowIndex": 1, "colIndex": 4, "textRaw": "17.5%", "textNormalized": "17.5%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r1c5", "rowIndex": 1, "colIndex": 5, "textRaw": "100%", "textNormalized": "100%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r2c0", "rowIndex": 2, "colIndex": 0, "textRaw": "Cost of Revenue", "textNormalized": "Cost of Revenue", "page": 42 },
+    { "cellId": "r2c1", "rowIndex": 2, "colIndex": 1, "textRaw": "$2,168.6", "textNormalized": "2168.6", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r2c2", "rowIndex": 2, "colIndex": 2, "textRaw": "$1,887.2", "textNormalized": "1887.2", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r2c3", "rowIndex": 2, "colIndex": 3, "textRaw": "$281.4", "textNormalized": "281.4", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r2c4", "rowIndex": 2, "colIndex": 4, "textRaw": "14.9%", "textNormalized": "14.9%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r2c5", "rowIndex": 2, "colIndex": 5, "textRaw": "45.0%", "textNormalized": "45.0%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r3c0", "rowIndex": 3, "colIndex": 0, "textRaw": "Gross Profit", "textNormalized": "Gross Profit", "page": 42 },
+    { "cellId": "r3c1", "rowIndex": 3, "colIndex": 1, "textRaw": "$2,652.7", "textNormalized": "2652.7", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r3c2", "rowIndex": 3, "colIndex": 2, "textRaw": "$2,215.5", "textNormalized": "2215.5", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r3c3", "rowIndex": 3, "colIndex": 3, "textRaw": "$437.2", "textNormalized": "437.2", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r3c4", "rowIndex": 3, "colIndex": 4, "textRaw": "19.7%", "textNormalized": "19.7%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r3c5", "rowIndex": 3, "colIndex": 5, "textRaw": "55.0%", "textNormalized": "55.0%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r4c0", "rowIndex": 4, "colIndex": 0, "textRaw": "Operating Expenses†", "textNormalized": "Operating Expenses", "page": 42 },
+    { "cellId": "r4c1", "rowIndex": 4, "colIndex": 1, "textRaw": "$1,445.0", "textNormalized": "1445.0", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r4c2", "rowIndex": 4, "colIndex": 2, "textRaw": "$1,312.8", "textNormalized": "1312.8", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r4c3", "rowIndex": 4, "colIndex": 3, "textRaw": "$132.2", "textNormalized": "132.2", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r4c4", "rowIndex": 4, "colIndex": 4, "textRaw": "10.1%", "textNormalized": "10.1%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r4c5", "rowIndex": 4, "colIndex": 5, "textRaw": "30.0%", "textNormalized": "30.0%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r5c0", "rowIndex": 5, "colIndex": 0, "textRaw": "EBITDA*", "textNormalized": "EBITDA", "page": 42 },
+    { "cellId": "r5c1", "rowIndex": 5, "colIndex": 1, "textRaw": "$1,207.7", "textNormalized": "1207.7", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r5c2", "rowIndex": 5, "colIndex": 2, "textRaw": "$902.7", "textNormalized": "902.7", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r5c3", "rowIndex": 5, "colIndex": 3, "textRaw": "$305.0", "textNormalized": "305.0", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r5c4", "rowIndex": 5, "colIndex": 4, "textRaw": "33.8%", "textNormalized": "33.8%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r5c5", "rowIndex": 5, "colIndex": 5, "textRaw": "25.1%", "textNormalized": "25.1%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r6c0", "rowIndex": 6, "colIndex": 0, "textRaw": "Net Income", "textNormalized": "Net Income", "page": 42 },
+    { "cellId": "r6c1", "rowIndex": 6, "colIndex": 1, "textRaw": "$842.3", "textNormalized": "842.3", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r6c2", "rowIndex": 6, "colIndex": 2, "textRaw": "$612.1", "textNormalized": "612.1", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r6c3", "rowIndex": 6, "colIndex": 3, "textRaw": "$230.2", "textNormalized": "230.2", "valueType": "currency", "units": "USD millions", "page": 42 },
+    { "cellId": "r6c4", "rowIndex": 6, "colIndex": 4, "textRaw": "37.6%", "textNormalized": "37.6%", "valueType": "percent", "units": "percent", "page": 42 },
+    { "cellId": "r6c5", "rowIndex": 6, "colIndex": 5, "textRaw": "17.5%", "textNormalized": "17.5%", "valueType": "percent", "units": "percent", "page": 42 }
+  ],
+  "provenance": [
+    { "step": "fixture-authoring", "tool": "manual", "version": "1.0.0", "timestamp": "2026-04-18T00:00:00Z" }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "footnotes-table",
+  "sourceDocumentId": "doc-research-2025",
+  "sourceFileName": "study-results.pdf",
+  "title": "Study Results Summary",
+  "caption": "Results with footnote annotations.",
+  "sectionPath": ["Research", "Results"],
+  "notes": [
+    "All values are mean ± SD.",
+    "Statistical significance tested at p < 0.05."
+  ],
+  "footnotes": [
+    "¹ Adjusted for age and sex.",
+    "² Excludes outliers beyond 3 SD.",
+    "³ Data collected over 12-month period."
+  ],
+  "pages": [5],
+  "columns": [
+    { "colIndex": 0, "label": "Group" },
+    { "colIndex": 1, "label": "n" },
+    { "colIndex": 2, "label": "Mean Score¹", "units": "points" },
+    { "colIndex": 3, "label": "SD²", "units": "points" },
+    { "colIndex": 4, "label": "Follow-up³", "units": "months" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0", "h1", "h2", "h3", "h4"], "page": 5 },
+    { "rowIndex": 1, "rowType": "body", "cellIds": ["r1c0", "r1c1", "r1c2", "r1c3", "r1c4"], "page": 5 },
+    { "rowIndex": 2, "rowType": "body", "cellIds": ["r2c0", "r2c1", "r2c2", "r2c3", "r2c4"], "page": 5 },
+    { "rowIndex": 3, "rowType": "body", "cellIds": ["r3c0", "r3c1", "r3c2", "r3c3", "r3c4"], "page": 5 },
+    { "rowIndex": 4, "rowType": "footer", "cellIds": ["r4c0", "r4c1", "r4c2", "r4c3", "r4c4"], "page": 5 }
+  ],
+  "cells": [
+    { "cellId": "h0", "rowIndex": 0, "colIndex": 0, "textRaw": "Group", "textNormalized": "Group", "isHeader": true, "page": 5 },
+    { "cellId": "h1", "rowIndex": 0, "colIndex": 1, "textRaw": "n", "textNormalized": "n", "isHeader": true, "page": 5 },
+    { "cellId": "h2", "rowIndex": 0, "colIndex": 2, "textRaw": "Mean Score¹", "textNormalized": "Mean Score", "isHeader": true, "page": 5 },
+    { "cellId": "h3", "rowIndex": 0, "colIndex": 3, "textRaw": "SD²", "textNormalized": "SD", "isHeader": true, "page": 5 },
+    { "cellId": "h4", "rowIndex": 0, "colIndex": 4, "textRaw": "Follow-up³", "textNormalized": "Follow-up", "isHeader": true, "page": 5 },
+    { "cellId": "r1c0", "rowIndex": 1, "colIndex": 0, "textRaw": "Control", "textNormalized": "Control", "page": 5 },
+    { "cellId": "r1c1", "rowIndex": 1, "colIndex": 1, "textRaw": "42", "textNormalized": "42", "valueType": "number", "page": 5 },
+    { "cellId": "r1c2", "rowIndex": 1, "colIndex": 2, "textRaw": "54.3¹", "textNormalized": "54.3", "valueType": "number", "units": "points", "page": 5 },
+    { "cellId": "r1c3", "rowIndex": 1, "colIndex": 3, "textRaw": "8.1²", "textNormalized": "8.1", "valueType": "number", "units": "points", "page": 5 },
+    { "cellId": "r1c4", "rowIndex": 1, "colIndex": 4, "textRaw": "12³", "textNormalized": "12", "valueType": "number", "units": "months", "page": 5 },
+    { "cellId": "r2c0", "rowIndex": 2, "colIndex": 0, "textRaw": "Treatment A", "textNormalized": "Treatment A", "page": 5 },
+    { "cellId": "r2c1", "rowIndex": 2, "colIndex": 1, "textRaw": "38", "textNormalized": "38", "valueType": "number", "page": 5 },
+    { "cellId": "r2c2", "rowIndex": 2, "colIndex": 2, "textRaw": "67.9¹", "textNormalized": "67.9", "valueType": "number", "units": "points", "page": 5 },
+    { "cellId": "r2c3", "rowIndex": 2, "colIndex": 3, "textRaw": "6.4²", "textNormalized": "6.4", "valueType": "number", "units": "points", "page": 5 },
+    { "cellId": "r2c4", "rowIndex": 2, "colIndex": 4, "textRaw": "12³", "textNormalized": "12", "valueType": "number", "units": "months", "page": 5 },
+    { "cellId": "r3c0", "rowIndex": 3, "colIndex": 0, "textRaw": "Treatment B", "textNormalized": "Treatment B", "page": 5 },
+    { "cellId": "r3c1", "rowIndex": 3, "colIndex": 1, "textRaw": "45", "textNormalized": "45", "valueType": "number", "page": 5 },
+    { "cellId": "r3c2", "rowIndex": 3, "colIndex": 2, "textRaw": "71.2¹", "textNormalized": "71.2", "valueType": "number", "units": "points", "page": 5 },
+    { "cellId": "r3c3", "rowIndex": 3, "colIndex": 3, "textRaw": "5.8²", "textNormalized": "5.8", "valueType": "number", "units": "points", "page": 5 },
+    { "cellId": "r3c4", "rowIndex": 3, "colIndex": 4, "textRaw": "12³", "textNormalized": "12", "valueType": "number", "units": "months", "page": 5 },
+    { "cellId": "r4c0", "rowIndex": 4, "colIndex": 0, "textRaw": "p-value", "textNormalized": "p-value", "page": 5 },
+    { "cellId": "r4c1", "rowIndex": 4, "colIndex": 1, "textRaw": "—", "textNormalized": "", "page": 5 },
+    { "cellId": "r4c2", "rowIndex": 4, "colIndex": 2, "textRaw": "< 0.001", "textNormalized": "< 0.001", "page": 5 },
+    { "cellId": "r4c3", "rowIndex": 4, "colIndex": 3, "textRaw": "< 0.001", "textNormalized": "< 0.001", "page": 5 },
+    { "cellId": "r4c4", "rowIndex": 4, "colIndex": 4, "textRaw": "—", "textNormalized": "", "page": 5 }
+  ],
+  "provenance": [
+    { "step": "fixture-authoring", "tool": "manual", "version": "1.0.0", "timestamp": "2026-04-18T00:00:00Z" }
+  ]
+}
