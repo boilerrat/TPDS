@@ -19,6 +19,12 @@ const cases = readdirSync(conformanceDir, { withFileTypes: true })
   .map((d) => d.name);
 
 describe("conformance fixtures", () => {
+  it("includes the EPSCA-derived wage schedule cases", () => {
+    expect(cases).toEqual(
+      expect.arrayContaining(["wage-schedule-colspan", "wage-schedule-rowspan"])
+    );
+  });
+
   it.each(cases)("%s — expected-html.html matches tableToHtml output", (caseName) => {
     const dir = path.join(conformanceDir, caseName);
     const input = JSON.parse(readFileSync(path.join(dir, "input.json"), "utf8")) as DocumentTable;

@@ -1,0 +1,137 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "wage-schedule-rowspan",
+  "sourceDocumentId": "doc-multi-trade-schedule-2024",
+  "sourceFileName": "multi-trade-wage-schedule-2024.pdf",
+  "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+  "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+  "sectionPath": ["Wage Schedules", "Multi-Trade Summary"],
+  "notes": [
+    "N/A indicates the classification does not exist within that trade.",
+    "Apprentice rates expressed as percentage of Journeyman rate for that effective date.",
+    "Rates shown are base hourly rates; total package includes vacation pay and benefits."
+  ],
+  "footnotes": [
+    "* Rates subject to ratification pending CBA renewal.",
+    "† Zone 1 (urban) rates shown; Zone 2 differential applies at remote sites."
+  ],
+  "pages": [2],
+  "columns": [
+    { "colIndex": 0, "label": "Trade" },
+    { "colIndex": 1, "label": "Classification" },
+    { "colIndex": 2, "label": "Jan 1 2024", "units": "$/hr" },
+    { "colIndex": 3, "label": "Jan 1 2025", "units": "$/hr" },
+    { "colIndex": 4, "label": "Jan 1 2026*", "units": "$/hr" },
+    { "colIndex": 5, "label": "Vac. Pay†", "units": "%" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0","h1","h2","h3","h4","h5"], "page": 2 },
+    { "rowIndex": 1, "rowType": "body",   "cellIds": ["r1c0","r1c1","r1c2","r1c3","r1c4","r1c5"], "page": 2 },
+    { "rowIndex": 2, "rowType": "body",   "cellIds": ["r2c0","r2c1","r2c2","r2c3","r2c4","r2c5"], "page": 2 },
+    { "rowIndex": 3, "rowType": "body",   "cellIds": ["r3c0","r3c1","r3c2","r3c3","r3c4","r3c5"], "page": 2 },
+    { "rowIndex": 4, "rowType": "body",   "cellIds": ["r4c0","r4c1","r4c2","r4c3","r4c4","r4c5"], "page": 2 },
+    { "rowIndex": 5, "rowType": "body",   "cellIds": ["r5c0","r5c1","r5c2","r5c3","r5c4","r5c5"], "page": 2 },
+    { "rowIndex": 6, "rowType": "body",   "cellIds": ["r6c0","r6c1","r6c2","r6c3","r6c4","r6c5"], "page": 2 },
+    { "rowIndex": 7, "rowType": "body",   "cellIds": ["r7c0","r7c1","r7c2","r7c3","r7c4","r7c5"], "page": 2 },
+    { "rowIndex": 8, "rowType": "body",   "cellIds": ["r8c0","r8c1","r8c2","r8c3","r8c4","r8c5"], "page": 2 },
+    { "rowIndex": 9, "rowType": "body",   "cellIds": ["r9c0","r9c1","r9c2","r9c3","r9c4","r9c5"], "page": 2 },
+    { "rowIndex": 10, "rowType": "body",  "cellIds": ["r10c0","r10c1","r10c2","r10c3","r10c4","r10c5"], "page": 2 },
+    { "rowIndex": 11, "rowType": "body",  "cellIds": ["r11c0","r11c1","r11c2","r11c3","r11c4","r11c5"], "page": 2 },
+    { "rowIndex": 12, "rowType": "body",  "cellIds": ["r12c0","r12c1","r12c2","r12c3","r12c4","r12c5"], "page": 2 }
+  ],
+  "cells": [
+    { "cellId": "h0",  "rowIndex": 0, "colIndex": 0, "textRaw": "Trade",          "textNormalized": "Trade",          "isHeader": true, "page": 2 },
+    { "cellId": "h1",  "rowIndex": 0, "colIndex": 1, "textRaw": "Classification", "textNormalized": "Classification", "isHeader": true, "page": 2 },
+    { "cellId": "h2",  "rowIndex": 0, "colIndex": 2, "textRaw": "Jan 1 2024",     "textNormalized": "Jan 1 2024",     "isHeader": true, "page": 2 },
+    { "cellId": "h3",  "rowIndex": 0, "colIndex": 3, "textRaw": "Jan 1 2025",     "textNormalized": "Jan 1 2025",     "isHeader": true, "page": 2 },
+    { "cellId": "h4",  "rowIndex": 0, "colIndex": 4, "textRaw": "Jan 1 2026*",    "textNormalized": "Jan 1 2026",     "isHeader": true, "page": 2 },
+    { "cellId": "h5",  "rowIndex": 0, "colIndex": 5, "textRaw": "Vac. Pay\u2020", "textNormalized": "Vac. Pay",       "isHeader": true, "page": 2 },
+
+    { "cellId": "r1c0",  "rowIndex": 1,  "colIndex": 0, "textRaw": "Boilermaker", "textNormalized": "Boilermaker", "rowSpan": 4, "page": 2 },
+    { "cellId": "r1c1",  "rowIndex": 1,  "colIndex": 1, "textRaw": "Journeyman",                     "textNormalized": "Journeyman",                     "page": 2 },
+    { "cellId": "r1c2",  "rowIndex": 1,  "colIndex": 2, "textRaw": "$51.50", "textNormalized": "51.50", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r1c3",  "rowIndex": 1,  "colIndex": 3, "textRaw": "$53.05", "textNormalized": "53.05", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r1c4",  "rowIndex": 1,  "colIndex": 4, "textRaw": "$54.64", "textNormalized": "54.64", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r1c5",  "rowIndex": 1,  "colIndex": 5, "textRaw": "10%",    "textNormalized": "10%",   "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r2c0",  "rowIndex": 2,  "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r2c1",  "rowIndex": 2,  "colIndex": 1, "textRaw": "3rd Period Apprentice (75%)",    "textNormalized": "3rd Period Apprentice (75%)",    "page": 2 },
+    { "cellId": "r2c2",  "rowIndex": 2,  "colIndex": 2, "textRaw": "$38.63", "textNormalized": "38.63", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r2c3",  "rowIndex": 2,  "colIndex": 3, "textRaw": "$39.79", "textNormalized": "39.79", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r2c4",  "rowIndex": 2,  "colIndex": 4, "textRaw": "$40.98", "textNormalized": "40.98", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r2c5",  "rowIndex": 2,  "colIndex": 5, "textRaw": "8%",     "textNormalized": "8%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r3c0",  "rowIndex": 3,  "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r3c1",  "rowIndex": 3,  "colIndex": 1, "textRaw": "2nd Period Apprentice (65%)",    "textNormalized": "2nd Period Apprentice (65%)",    "page": 2 },
+    { "cellId": "r3c2",  "rowIndex": 3,  "colIndex": 2, "textRaw": "$33.48", "textNormalized": "33.48", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r3c3",  "rowIndex": 3,  "colIndex": 3, "textRaw": "$34.48", "textNormalized": "34.48", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r3c4",  "rowIndex": 3,  "colIndex": 4, "textRaw": "$35.52", "textNormalized": "35.52", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r3c5",  "rowIndex": 3,  "colIndex": 5, "textRaw": "6%",     "textNormalized": "6%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r4c0",  "rowIndex": 4,  "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r4c1",  "rowIndex": 4,  "colIndex": 1, "textRaw": "1st Period Apprentice (55%)",    "textNormalized": "1st Period Apprentice (55%)",    "page": 2 },
+    { "cellId": "r4c2",  "rowIndex": 4,  "colIndex": 2, "textRaw": "$28.33", "textNormalized": "28.33", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r4c3",  "rowIndex": 4,  "colIndex": 3, "textRaw": "$29.18", "textNormalized": "29.18", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r4c4",  "rowIndex": 4,  "colIndex": 4, "textRaw": "$30.05", "textNormalized": "30.05", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r4c5",  "rowIndex": 4,  "colIndex": 5, "textRaw": "6%",     "textNormalized": "6%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r5c0",  "rowIndex": 5,  "colIndex": 0, "textRaw": "Pipefitter", "textNormalized": "Pipefitter", "rowSpan": 4, "page": 2 },
+    { "cellId": "r5c1",  "rowIndex": 5,  "colIndex": 1, "textRaw": "Journeyman",                     "textNormalized": "Journeyman",                     "page": 2 },
+    { "cellId": "r5c2",  "rowIndex": 5,  "colIndex": 2, "textRaw": "$53.20", "textNormalized": "53.20", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r5c3",  "rowIndex": 5,  "colIndex": 3, "textRaw": "$54.80", "textNormalized": "54.80", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r5c4",  "rowIndex": 5,  "colIndex": 4, "textRaw": "$56.44", "textNormalized": "56.44", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r5c5",  "rowIndex": 5,  "colIndex": 5, "textRaw": "10%",    "textNormalized": "10%",   "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r6c0",  "rowIndex": 6,  "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r6c1",  "rowIndex": 6,  "colIndex": 1, "textRaw": "3rd Period Apprentice (75%)",    "textNormalized": "3rd Period Apprentice (75%)",    "page": 2 },
+    { "cellId": "r6c2",  "rowIndex": 6,  "colIndex": 2, "textRaw": "$39.90", "textNormalized": "39.90", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r6c3",  "rowIndex": 6,  "colIndex": 3, "textRaw": "$41.10", "textNormalized": "41.10", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r6c4",  "rowIndex": 6,  "colIndex": 4, "textRaw": "$42.33", "textNormalized": "42.33", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r6c5",  "rowIndex": 6,  "colIndex": 5, "textRaw": "8%",     "textNormalized": "8%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r7c0",  "rowIndex": 7,  "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r7c1",  "rowIndex": 7,  "colIndex": 1, "textRaw": "2nd Period Apprentice (65%)",    "textNormalized": "2nd Period Apprentice (65%)",    "page": 2 },
+    { "cellId": "r7c2",  "rowIndex": 7,  "colIndex": 2, "textRaw": "$34.58", "textNormalized": "34.58", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r7c3",  "rowIndex": 7,  "colIndex": 3, "textRaw": "$35.62", "textNormalized": "35.62", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r7c4",  "rowIndex": 7,  "colIndex": 4, "textRaw": "$36.69", "textNormalized": "36.69", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r7c5",  "rowIndex": 7,  "colIndex": 5, "textRaw": "6%",     "textNormalized": "6%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r8c0",  "rowIndex": 8,  "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r8c1",  "rowIndex": 8,  "colIndex": 1, "textRaw": "1st Period Apprentice (55%)",    "textNormalized": "1st Period Apprentice (55%)",    "page": 2 },
+    { "cellId": "r8c2",  "rowIndex": 8,  "colIndex": 2, "textRaw": "$29.26", "textNormalized": "29.26", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r8c3",  "rowIndex": 8,  "colIndex": 3, "textRaw": "$30.14", "textNormalized": "30.14", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r8c4",  "rowIndex": 8,  "colIndex": 4, "textRaw": "$31.04", "textNormalized": "31.04", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r8c5",  "rowIndex": 8,  "colIndex": 5, "textRaw": "6%",     "textNormalized": "6%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r9c0",  "rowIndex": 9,  "colIndex": 0, "textRaw": "Carpenter", "textNormalized": "Carpenter", "rowSpan": 4, "page": 2 },
+    { "cellId": "r9c1",  "rowIndex": 9,  "colIndex": 1, "textRaw": "Journeyman",                     "textNormalized": "Journeyman",                     "page": 2 },
+    { "cellId": "r9c2",  "rowIndex": 9,  "colIndex": 2, "textRaw": "$48.75", "textNormalized": "48.75", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r9c3",  "rowIndex": 9,  "colIndex": 3, "textRaw": "$50.21", "textNormalized": "50.21", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r9c4",  "rowIndex": 9,  "colIndex": 4, "textRaw": "$51.72", "textNormalized": "51.72", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r9c5",  "rowIndex": 9,  "colIndex": 5, "textRaw": "10%",    "textNormalized": "10%",   "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r10c0", "rowIndex": 10, "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r10c1", "rowIndex": 10, "colIndex": 1, "textRaw": "Foreman (+15%)",                  "textNormalized": "Foreman (+15%)",                  "page": 2 },
+    { "cellId": "r10c2", "rowIndex": 10, "colIndex": 2, "textRaw": "$56.06", "textNormalized": "56.06", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r10c3", "rowIndex": 10, "colIndex": 3, "textRaw": "$57.74", "textNormalized": "57.74", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r10c4", "rowIndex": 10, "colIndex": 4, "textRaw": "$59.48", "textNormalized": "59.48", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r10c5", "rowIndex": 10, "colIndex": 5, "textRaw": "10%",    "textNormalized": "10%",   "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r11c0", "rowIndex": 11, "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r11c1", "rowIndex": 11, "colIndex": 1, "textRaw": "2nd Period Apprentice (65%)",    "textNormalized": "2nd Period Apprentice (65%)",    "page": 2 },
+    { "cellId": "r11c2", "rowIndex": 11, "colIndex": 2, "textRaw": "$31.69", "textNormalized": "31.69", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r11c3", "rowIndex": 11, "colIndex": 3, "textRaw": "$32.64", "textNormalized": "32.64", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r11c4", "rowIndex": 11, "colIndex": 4, "textRaw": "$33.62", "textNormalized": "33.62", "valueType": "currency", "units": "$/hr", "page": 2 },
+    { "cellId": "r11c5", "rowIndex": 11, "colIndex": 5, "textRaw": "6%",     "textNormalized": "6%",    "valueType": "percent",  "units": "%",    "page": 2 },
+
+    { "cellId": "r12c0", "rowIndex": 12, "colIndex": 0, "textRaw": "", "textNormalized": "", "page": 2 },
+    { "cellId": "r12c1", "rowIndex": 12, "colIndex": 1, "textRaw": "1st Period Apprentice (N/A)", "textNormalized": "N/A", "page": 2 },
+    { "cellId": "r12c2", "rowIndex": 12, "colIndex": 2, "textRaw": "N/A", "textNormalized": "N/A", "page": 2 },
+    { "cellId": "r12c3", "rowIndex": 12, "colIndex": 3, "textRaw": "N/A", "textNormalized": "N/A", "page": 2 },
+    { "cellId": "r12c4", "rowIndex": 12, "colIndex": 4, "textRaw": "N/A", "textNormalized": "N/A", "page": 2 },
+    { "cellId": "r12c5", "rowIndex": 12, "colIndex": 5, "textRaw": "N/A", "textNormalized": "N/A", "page": 2 }
+  ],
+  "provenance": [
+    { "step": "fixture-authoring", "tool": "manual", "version": "1.0.0", "timestamp": "2026-04-18T00:00:00Z" }
+  ]
+}

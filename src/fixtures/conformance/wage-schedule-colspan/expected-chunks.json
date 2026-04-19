@@ -1,0 +1,165 @@
+[
+  {
+    "chunkId": "wage-schedule-colspan:summary:0",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "summary",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\nCaption: Straight time, overtime (1.5×), and double time (2×) rates by classification.\nColumns: Classification, Base Rate, Vac. Pay, Total†, Base Rate, Vac. Pay, Total†, Base Rate, Vac. Pay, Total†",
+    "rowIndexes": [],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 56,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-colspan:row:2",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "row",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 2\nClassification: Journeyman\nBase Rate: 50.00\nVac. Pay: 10%\nTotal†: 55.00\nBase Rate: 75.00\nVac. Pay: 10%\nTotal†: 82.50\nBase Rate: 100.00\nVac. Pay: 10%\nTotal†: 110.00",
+    "rowIndexes": [
+      2
+    ],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 55,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-colspan:row:3",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "row",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 3\nClassification: 4th Period Apprentice (80%)\nBase Rate: 40.00\nVac. Pay: 10%\nTotal†: 44.00\nBase Rate: 60.00\nVac. Pay: 10%\nTotal†: 66.00\nBase Rate: 80.00\nVac. Pay: 10%\nTotal†: 88.00",
+    "rowIndexes": [
+      3
+    ],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 59,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-colspan:row:4",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "row",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 4\nClassification: 3rd Period Apprentice (70%)\nBase Rate: 35.00\nVac. Pay: 10%\nTotal†: 38.50\nBase Rate: 52.50\nVac. Pay: 10%\nTotal†: 57.75\nBase Rate: 70.00\nVac. Pay: 10%\nTotal†: 77.00",
+    "rowIndexes": [
+      4
+    ],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 59,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-colspan:row:5",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "row",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 5\nClassification: 2nd Period Apprentice (60%)\nBase Rate: 30.00\nVac. Pay: 10%\nTotal†: 33.00\nBase Rate: 45.00\nVac. Pay: 10%\nTotal†: 49.50\nBase Rate: 60.00\nVac. Pay: 10%\nTotal†: 66.00",
+    "rowIndexes": [
+      5
+    ],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 59,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-colspan:row:6",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "row",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 6\nClassification: 1st Period Apprentice (50%)\nBase Rate: 25.00\nVac. Pay: 10%\nTotal†: 27.50\nBase Rate: 37.50\nVac. Pay: 10%\nTotal†: 41.25\nBase Rate: 50.00\nVac. Pay: 10%\nTotal†: 55.00",
+    "rowIndexes": [
+      6
+    ],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 59,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-colspan:row-group:2-6",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "row-group",
+    "text": "Table: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 2\nClassification: Journeyman\nBase Rate: 50.00\nVac. Pay: 10%\nTotal†: 55.00\nBase Rate: 75.00\nVac. Pay: 10%\nTotal†: 82.50\nBase Rate: 100.00\nVac. Pay: 10%\nTotal†: 110.00\n\nTable: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 3\nClassification: 4th Period Apprentice (80%)\nBase Rate: 40.00\nVac. Pay: 10%\nTotal†: 44.00\nBase Rate: 60.00\nVac. Pay: 10%\nTotal†: 66.00\nBase Rate: 80.00\nVac. Pay: 10%\nTotal†: 88.00\n\nTable: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 4\nClassification: 3rd Period Apprentice (70%)\nBase Rate: 35.00\nVac. Pay: 10%\nTotal†: 38.50\nBase Rate: 52.50\nVac. Pay: 10%\nTotal†: 57.75\nBase Rate: 70.00\nVac. Pay: 10%\nTotal†: 77.00\n\nTable: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 5\nClassification: 2nd Period Apprentice (60%)\nBase Rate: 30.00\nVac. Pay: 10%\nTotal†: 33.00\nBase Rate: 45.00\nVac. Pay: 10%\nTotal†: 49.50\nBase Rate: 60.00\nVac. Pay: 10%\nTotal†: 66.00\n\nTable: Boilermaker Wage Schedule — 2024\nSection: Wage Schedules > Boilermakers\nPage Range: 1\n\nRow 6\nClassification: 1st Period Apprentice (50%)\nBase Rate: 25.00\nVac. Pay: 10%\nTotal†: 27.50\nBase Rate: 37.50\nVac. Pay: 10%\nTotal†: 41.25\nBase Rate: 50.00\nVac. Pay: 10%\nTotal†: 55.00",
+    "rowIndexes": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 289,
+    "sourceRefs": [],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  },
+  {
+    "chunkId": "wage-schedule-colspan:notes:0",
+    "tableId": "wage-schedule-colspan",
+    "chunkType": "notes",
+    "text": "Notes:\n- Rates effective January 1, 2024.\n- Overtime applies after 8 hours per day or 40 hours per week.\n- Double time applies on statutory holidays and Sundays.\n\nFootnotes:\n- * Vacation pay calculated on gross earnings including overtime.\n- † Total Package includes base rate plus vacation pay only; benefits billed separately.\n\nUnits:\n- Base Rate: $/hr\n- Vac. Pay: %\n- Total†: $/hr\n- Base Rate: $/hr\n- Vac. Pay: %\n- Total†: $/hr\n- Base Rate: $/hr\n- Vac. Pay: %\n- Total†: $/hr",
+    "rowIndexes": [],
+    "pages": [
+      1
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Boilermakers"
+    ],
+    "title": "Boilermaker Wage Schedule — 2024",
+    "caption": "Straight time, overtime (1.5×), and double time (2×) rates by classification.",
+    "tokenEstimate": 115,
+    "sourceRefs": []
+  }
+]

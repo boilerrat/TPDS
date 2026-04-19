@@ -21,6 +21,8 @@ conformance/
 | `simple-table` | Single-page table with headers, body rows, footnotes |
 | `merged-cells-table` | Table containing `rowspan`/`colspan` merged cells |
 | `multipage-table` | Table spanning multiple pages with continuation rows |
+| `wage-schedule-colspan` | EPSCA-derived wage schedule with grouped overtime/double-time headers |
+| `wage-schedule-rowspan` | EPSCA-derived wage schedule with trade labels spanning multiple classifications |
 
 ## How to use
 
@@ -55,7 +57,13 @@ node --input-type=module << 'EOF'
 import { readFileSync, writeFileSync } from "node:fs";
 import { tableToHtml, tableToMarkdown, buildTableChunks } from "./dist/index.js";
 
-const cases = ["simple-table", "merged-cells-table", "multipage-table"];
+const cases = [
+  "simple-table",
+  "merged-cells-table",
+  "multipage-table",
+  "wage-schedule-colspan",
+  "wage-schedule-rowspan"
+];
 const base = "./src/fixtures/conformance";
 
 for (const c of cases) {
