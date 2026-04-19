@@ -1,6 +1,13 @@
 import { describe, expect, it } from "vitest";
 
-import { buildTableChunks, mergeMultiPageTables } from "../index";
+import {
+  buildNoteChunks,
+  buildRowChunks,
+  buildRowGroupChunks,
+  buildTableChunks,
+  inferHeaders,
+  mergeMultiPageTables,
+} from "../index";
 import { loadFixture } from "./helpers";
 
 describe("chunk builders", () => {
@@ -49,5 +56,84 @@ describe("chunk builders", () => {
 
     expect(rowChunks).not.toContain(2);
     expect(rowChunks).toEqual([1, 3]);
+  });
+
+  it("summary chunk has chunkType, title, sectionPath, pages, and positive tokenEstimate", () => {
+    const table = loadFixture("simple-table");
+    const chunks = buildTableChunks(table, {
+      includeRowChunks: false,
+      includeRowGroupChunks: false,
+      includeNotesChunk: false,
+    });
+    const summary = chunks.find((c) => c.chunkType === "summary");
+    expect(summary).toBeDefined();
+    expect(summary?.chunkType).toBe("summary");
+    expect(summary?.title).toBe("Revenue by Quarter");
+    expect(summary?.sectionPath).toEqual(["Financial Results", "Q1 2025"]);
+    expect(summary?.pages).toEqual([14]);
+    expect(summary?.tokenEstimate).toBeGreaterThan(0);
+  });
+
+  it("row chunks include inferred header text as cell labels after inferHeaders", () => {
+    const raw = loadFixture("simple-table");
+    const table = inferHeaders(raw);
+    const bodyCells = table.cells.filter((c) => !c.isHeader);
+    expect(bodyCells.every((c) => (c.inferredHeaders?.length ?? 0) > 0)).toBe(true);
+    const chunks = buildRowChunks(table);
+    for (const chunk of chunks) {
+      expect(chunk.text).toContain("Quarter:");
+    }
+  });
+
+  it("row chunks skip rows with repeatedHeaderRow:true", () => {
+    const table = loadFixture("multipage-table");
+    const chunks = buildRowChunks(table);
+    const rowIndexes = chunks.map((c) => c.rowIndexes[0]);
+    expect(rowIndexes).not.toContain(0);
+    expect(rowIndexes).not.toContain(2);
+    expect(rowIndexes).toEqual(expect.arrayContaining([1, 3]));
+  });
+
+  it("buildRowGroupChunks produces ceil(bodyRows/groupSize) chunks with correct rowIndexes", () => {
+    const table = loadFixture("simple-table");
+    const bodyRowCount = table.rows.filter(
+      (r) => r.rowType !== "header" && r.rowType !== "note" && !r.repeatedHeaderRow
+    ).length;
+    const chunks = buildRowGroupChunks(table, 3);
+    expect(chunks).toHaveLength(Math.ceil(bodyRowCount / 3));
+    expect(chunks[0]?.rowIndexes).toEqual([1, 2]);
+  });
+
+  it("notes chunk absent when table has no notes, present and singular when notes exist", () => {
+    expect(buildNoteChunks(loadFixture("merged-cells-table"))).toHaveLength(0);
+    const noteChunks = buildNoteChunks(loadFixture("simple-table"));
+    expect(noteChunks).toHaveLength(1);
+    expect(noteChunks[0]?.chunkType).toBe("notes");
+  });
+
+  it("includeSummaryChunk:false omits the summary chunk", () => {
+    const chunks = buildTableChunks(loadFixture("simple-table"), { includeSummaryChunk: false });
+    expect(chunks.some((c) => c.chunkType === "summary")).toBe(false);
+  });
+
+  it("includeRowChunks:false omits all row chunks", () => {
+    const chunks = buildTableChunks(loadFixture("simple-table"), { includeRowChunks: false });
+    expect(chunks.some((c) => c.chunkType === "row")).toBe(false);
+  });
+
+  it("row chunk pages reference the row's page, not the full table page list", () => {
+    const table = loadFixture("multipage-table");
+    const chunks = buildRowChunks(table);
+    const chunkForRow3 = chunks.find((c) => c.rowIndexes[0] === 3);
+    expect(chunkForRow3).toBeDefined();
+    expect(chunkForRow3?.pages).toEqual([21]);
+  });
+
+  it("tokenEstimate is a positive integer on every chunk type", () => {
+    const chunks = buildTableChunks(loadFixture("simple-table"), { rowGroupSize: 1 });
+    for (const chunk of chunks) {
+      expect(Number.isInteger(chunk.tokenEstimate)).toBe(true);
+      expect(chunk.tokenEstimate).toBeGreaterThan(0);
+    }
   });
 });
