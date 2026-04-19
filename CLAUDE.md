@@ -19,6 +19,17 @@ npx vitest run src/__tests__/chunking.test.ts
 
 Tests live in `src/__tests__/` and match `**/*.test.ts`. Fixtures are JSON files in `src/fixtures/`.
 
+## GitHub workflow
+
+- Follow the repository's GitHub Actions workflows in `.github/workflows/`.
+- Before opening or updating a PR, run `npm run lint`, `npm test`, and `npm run build` locally. These are the checks enforced by `.github/workflows/ci.yml` on pushes and pull requests to `main`.
+- When creating a PR, use `.github/pull_request_template.md` as the source of truth for the PR body.
+- Fill out every section in the template:
+  - `## Summary`
+  - `## Changes`
+  - `## Closes`
+- The `Closes` section must include a linked GitHub issue using `Closes #<number>`, `Fixes #<number>`, or `Resolves #<number>`. `.github/workflows/pr-issue-check.yml` enforces this on pull requests to `main`.
+
 ## Architecture
 
 This is a zero-runtime-dep TypeScript library (only `zod` as a prod dep) that defines a canonical `DocumentTable` JSON model for document-ingestion pipelines. The surface area is:
