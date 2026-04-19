@@ -82,6 +82,15 @@ export const continuitySchema = z.object({
   logicalTableGroupId: z.string().optional()
 });
 
+export const fidelityWarningSchema = z.enum([
+  "merged-cells-present",
+  "headers-inferred",
+  "markdown-lossy",
+  "repeated-headers-detected",
+  "ocr-noise-suspected",
+  "multi-page-merged"
+]);
+
 export const documentTableSchema = z.object({
   standardVersion: z.string().min(1),
   tableId: z.string().min(1),
@@ -100,7 +109,8 @@ export const documentTableSchema = z.object({
   headerGroups: z.array(headerGroupSchema).optional(),
   metadata: jsonRecordSchema.optional(),
   continuity: continuitySchema.optional(),
-  provenance: z.array(provenanceSchema).optional()
+  provenance: z.array(provenanceSchema).optional(),
+  fidelityWarnings: z.array(fidelityWarningSchema).optional()
 });
 
 export const tableChunkSchema = z.object({
