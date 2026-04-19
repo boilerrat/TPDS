@@ -1,0 +1,23 @@
+name: PR Issue Check
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize, reopened]
+    branches: [main]
+
+jobs:
+  check-linked-issue:
+    name: check-linked-issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Require linked issue
+        env:
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: |
+          if echo "$PR_BODY" | grep -iqE '(closes|fixes|resolves)[[:space:]]+#[0-9]+'; then
+            echo "✓ PR body contains a linked issue."
+          else
+            echo "✗ PR body must reference a GitHub issue."
+            echo "  Add one of: 'Closes #N', 'Fixes #N', or 'Resolves #N'"
+            exit 1
+          fi
