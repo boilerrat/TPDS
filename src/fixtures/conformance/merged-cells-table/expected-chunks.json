@@ -1,0 +1,63 @@
+[
+  {
+    "chunkId": "merged-cells-table:summary:0",
+    "tableId": "merged-cells-table",
+    "chunkType": "summary",
+    "text": "Table: Employee Counts by Department\nSection: Operations > Workforce\nPage Range: 8\nCaption: Department totals with merged top-level grouping headers.\nColumns: Department, Full Time, Contract",
+    "rowIndexes": [],
+    "pages": [
+      8
+    ],
+    "sectionPath": [
+      "Operations",
+      "Workforce"
+    ],
+    "title": "Employee Counts by Department",
+    "caption": "Department totals with merged top-level grouping headers.",
+    "tokenEstimate": 33,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "merged-cells-table:row:2",
+    "tableId": "merged-cells-table",
+    "chunkType": "row",
+    "text": "Table: Employee Counts by Department\nSection: Operations > Workforce\nPage Range: 8\n\nRow 2\nDepartment: Engineering\nFull Time: 82\nContract: 14",
+    "rowIndexes": [
+      2
+    ],
+    "pages": [
+      8
+    ],
+    "sectionPath": [
+      "Operations",
+      "Workforce"
+    ],
+    "title": "Employee Counts by Department",
+    "caption": "Department totals with merged top-level grouping headers.",
+    "tokenEstimate": 28,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "merged-cells-table:row-group:2-2",
+    "tableId": "merged-cells-table",
+    "chunkType": "row-group",
+    "text": "Table: Employee Counts by Department\nSection: Operations > Workforce\nPage Range: 8\n\nRow 2\nDepartment: Engineering\nFull Time: 82\nContract: 14",
+    "rowIndexes": [
+      2
+    ],
+    "pages": [
+      8
+    ],
+    "sectionPath": [
+      "Operations",
+      "Workforce"
+    ],
+    "title": "Employee Counts by Department",
+    "caption": "Department totals with merged top-level grouping headers.",
+    "tokenEstimate": 28,
+    "sourceRefs": [],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  }
+]

@@ -1,0 +1,103 @@
+{
+  "standardVersion": "1.0.0",
+  "tableId": "simple-table",
+  "sourceDocumentId": "doc-financials-2025",
+  "sourceFileName": "financial-results-q1.pdf",
+  "title": "Revenue by Quarter",
+  "caption": "Quarterly revenue and margin by region.",
+  "sectionPath": ["Financial Results", "Q1 2025"],
+  "notes": ["Revenue values are unaudited."],
+  "footnotes": ["Operating margin is shown after regional allocations."],
+  "pages": [14],
+  "columns": [
+    { "colIndex": 0, "label": "Quarter" },
+    { "colIndex": 1, "label": "Region" },
+    { "colIndex": 2, "label": "Revenue", "units": "USD millions" },
+    { "colIndex": 3, "label": "Operating Margin", "units": "percent" }
+  ],
+  "rows": [
+    { "rowIndex": 0, "rowType": "header", "cellIds": ["h0", "h1", "h2", "h3"], "page": 14 },
+    { "rowIndex": 1, "rowType": "body", "cellIds": ["r1c0", "r1c1", "r1c2", "r1c3"], "page": 14 },
+    { "rowIndex": 2, "rowType": "body", "cellIds": ["r2c0", "r2c1", "r2c2", "r2c3"], "page": 14 }
+  ],
+  "cells": [
+    { "cellId": "h0", "rowIndex": 0, "colIndex": 0, "textRaw": "Quarter", "textNormalized": "Quarter", "isHeader": true, "page": 14 },
+    { "cellId": "h1", "rowIndex": 0, "colIndex": 1, "textRaw": "Region", "textNormalized": "Region", "isHeader": true, "page": 14 },
+    { "cellId": "h2", "rowIndex": 0, "colIndex": 2, "textRaw": "Revenue", "textNormalized": "Revenue", "isHeader": true, "page": 14 },
+    { "cellId": "h3", "rowIndex": 0, "colIndex": 3, "textRaw": "Operating Margin", "textNormalized": "Operating Margin", "isHeader": true, "page": 14 },
+    {
+      "cellId": "r1c0",
+      "rowIndex": 1,
+      "colIndex": 0,
+      "textRaw": "Q1 2025",
+      "textNormalized": "Q1 2025",
+      "page": 14,
+      "sourceRefs": [{ "page": 14, "extractor": "fixture", "extractorVersion": "1.0.0", "confidence": 1 }]
+    },
+    {
+      "cellId": "r1c1",
+      "rowIndex": 1,
+      "colIndex": 1,
+      "textRaw": "North America",
+      "textNormalized": "North America",
+      "page": 14
+    },
+    {
+      "cellId": "r1c2",
+      "rowIndex": 1,
+      "colIndex": 2,
+      "textRaw": "12.4M",
+      "textNormalized": "12.4M",
+      "page": 14,
+      "valueType": "currency",
+      "units": "USD millions"
+    },
+    {
+      "cellId": "r1c3",
+      "rowIndex": 1,
+      "colIndex": 3,
+      "textRaw": "18%",
+      "textNormalized": "18%",
+      "page": 14,
+      "valueType": "percent"
+    },
+    {
+      "cellId": "r2c0",
+      "rowIndex": 2,
+      "colIndex": 0,
+      "textRaw": "Q1 2025",
+      "textNormalized": "Q1 2025",
+      "page": 14
+    },
+    {
+      "cellId": "r2c1",
+      "rowIndex": 2,
+      "colIndex": 1,
+      "textRaw": "Europe",
+      "textNormalized": "Europe",
+      "page": 14
+    },
+    {
+      "cellId": "r2c2",
+      "rowIndex": 2,
+      "colIndex": 2,
+      "textRaw": "9.7M",
+      "textNormalized": "9.7M",
+      "page": 14,
+      "valueType": "currency",
+      "units": "USD millions"
+    },
+    {
+      "cellId": "r2c3",
+      "rowIndex": 2,
+      "colIndex": 3,
+      "textRaw": "16%",
+      "textNormalized": "16%",
+      "page": 14,
+      "valueType": "percent"
+    }
+  ],
+  "provenance": [
+    { "step": "fixture-authoring", "tool": "manual", "version": "1.0.0", "timestamp": "2026-04-18T00:00:00Z" }
+  ]
+}

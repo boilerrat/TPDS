@@ -1,0 +1,130 @@
+[
+  {
+    "chunkId": "simple-table:summary:0",
+    "tableId": "simple-table",
+    "chunkType": "summary",
+    "text": "Table: Revenue by Quarter\nSection: Financial Results > Q1 2025\nPage Range: 14\nCaption: Quarterly revenue and margin by region.\nColumns: Quarter, Region, Revenue, Operating Margin",
+    "rowIndexes": [],
+    "pages": [
+      14
+    ],
+    "sectionPath": [
+      "Financial Results",
+      "Q1 2025"
+    ],
+    "title": "Revenue by Quarter",
+    "caption": "Quarterly revenue and margin by region.",
+    "tokenEstimate": 34,
+    "sourceRefs": [
+      {
+        "page": 14,
+        "extractor": "fixture",
+        "extractorVersion": "1.0.0",
+        "confidence": 1
+      }
+    ]
+  },
+  {
+    "chunkId": "simple-table:row:1",
+    "tableId": "simple-table",
+    "chunkType": "row",
+    "text": "Table: Revenue by Quarter\nSection: Financial Results > Q1 2025\nPage Range: 14\n\nRow 1\nQuarter: Q1 2025\nRegion: North America\nRevenue: 12.4M\nOperating Margin: 18%",
+    "rowIndexes": [
+      1
+    ],
+    "pages": [
+      14
+    ],
+    "sectionPath": [
+      "Financial Results",
+      "Q1 2025"
+    ],
+    "title": "Revenue by Quarter",
+    "caption": "Quarterly revenue and margin by region.",
+    "tokenEstimate": 34,
+    "sourceRefs": [
+      {
+        "page": 14,
+        "extractor": "fixture",
+        "extractorVersion": "1.0.0",
+        "confidence": 1
+      }
+    ]
+  },
+  {
+    "chunkId": "simple-table:row:2",
+    "tableId": "simple-table",
+    "chunkType": "row",
+    "text": "Table: Revenue by Quarter\nSection: Financial Results > Q1 2025\nPage Range: 14\n\nRow 2\nQuarter: Q1 2025\nRegion: Europe\nRevenue: 9.7M\nOperating Margin: 16%",
+    "rowIndexes": [
+      2
+    ],
+    "pages": [
+      14
+    ],
+    "sectionPath": [
+      "Financial Results",
+      "Q1 2025"
+    ],
+    "title": "Revenue by Quarter",
+    "caption": "Quarterly revenue and margin by region.",
+    "tokenEstimate": 33,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "simple-table:row-group:1-2",
+    "tableId": "simple-table",
+    "chunkType": "row-group",
+    "text": "Table: Revenue by Quarter\nSection: Financial Results > Q1 2025\nPage Range: 14\n\nRow 1\nQuarter: Q1 2025\nRegion: North America\nRevenue: 12.4M\nOperating Margin: 18%\n\nTable: Revenue by Quarter\nSection: Financial Results > Q1 2025\nPage Range: 14\n\nRow 2\nQuarter: Q1 2025\nRegion: Europe\nRevenue: 9.7M\nOperating Margin: 16%",
+    "rowIndexes": [
+      1,
+      2
+    ],
+    "pages": [
+      14
+    ],
+    "sectionPath": [
+      "Financial Results",
+      "Q1 2025"
+    ],
+    "title": "Revenue by Quarter",
+    "caption": "Quarterly revenue and margin by region.",
+    "tokenEstimate": 67,
+    "sourceRefs": [
+      {
+        "page": 14,
+        "extractor": "fixture",
+        "extractorVersion": "1.0.0",
+        "confidence": 1
+      }
+    ],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  },
+  {
+    "chunkId": "simple-table:notes:0",
+    "tableId": "simple-table",
+    "chunkType": "notes",
+    "text": "Notes:\n- Revenue values are unaudited.\n\nFootnotes:\n- Operating margin is shown after regional allocations.\n\nUnits:\n- Revenue: USD millions\n- Operating Margin: percent",
+    "rowIndexes": [],
+    "pages": [
+      14
+    ],
+    "sectionPath": [
+      "Financial Results",
+      "Q1 2025"
+    ],
+    "title": "Revenue by Quarter",
+    "caption": "Quarterly revenue and margin by region.",
+    "tokenEstimate": 32,
+    "sourceRefs": [
+      {
+        "page": 14,
+        "extractor": "fixture",
+        "extractorVersion": "1.0.0",
+        "confidence": 1
+      }
+    ]
+  }
+]
