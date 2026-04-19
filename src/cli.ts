@@ -47,6 +47,18 @@ type ParsedArgs = {
   flags: Map<string, string | true>;
 };
 
+function writeStream(stream: { fd: number }, content: string): void {
+  writeFileSync(stream.fd, content, "utf8");
+}
+
+function writeStdout(content: string): void {
+  writeStream(process.stdout, content);
+}
+
+function writeStderr(content: string): void {
+  writeStream(process.stderr, content);
+}
+
 function parseArgs(args: string[]): ParsedArgs {
   const positional: string[] = [];
   const flags = new Map<string, string | true>();
@@ -75,15 +87,13 @@ function readJson(filePath: string): unknown {
     raw = readFileSync(resolve(filePath), "utf8");
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    process.stderr.write(`Error reading file "${filePath}": ${msg}\n`);
-    process.exit(1);
+    throw new Error(`Error reading file "${filePath}": ${msg}`);
   }
   try {
     return JSON.parse(raw) as unknown;
   } catch (err) {
     const msg = err instanceof Error ? err.message : String(err);
-    process.stderr.write(`Error parsing JSON in "${filePath}": ${msg}\n`);
-    process.exit(1);
+    throw new Error(`Error parsing JSON in "${filePath}": ${msg}`);
   }
 }
 
@@ -91,102 +101,130 @@ function writeOutput(content: string, outputPath: string | undefined): void {
   if (outputPath) {
     writeFileSync(resolve(outputPath), content, "utf8");
   } else {
-    process.stdout.write(content);
-    if (!content.endsWith("\n")) process.stdout.write("\n");
+    writeStdout(content);
+    if (!content.endsWith("\n")) writeStdout("\n");
   }
 }
 
-const argv = process.argv.slice(2);
+function main(): number {
+  const argv = process.argv.slice(2);
 
-if (argv.length === 0 || argv[0] === "--help" || argv[0] === "-h") {
-  process.stdout.write(USAGE);
-  process.exit(0);
+  if (argv.length === 0 || argv[0] === "--help" || argv[0] === "-h") {
+    writeStdout(USAGE);
+    return 0;
+  }
+
+  const command = argv[0];
+  const { positional, flags } = parseArgs(argv.slice(1));
+  const isHelp = flags.has("--help") || flags.has("-h");
+
+  if (command === "validate") {
+    if (isHelp) {
+      writeStdout(VALIDATE_USAGE);
+      return 0;
+    }
+    const filePath = positional[0];
+    if (!filePath) {
+      writeStderr("Error: validate requires a file path\n");
+      return 1;
+    }
+    let data: unknown;
+    try {
+      data = readJson(filePath);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      writeStderr(`${msg}\n`);
+      return 1;
+    }
+    const result = safeValidateTable(data);
+    if (result.success) {
+      writeStdout(`Valid: ${filePath}\n`);
+      return 0;
+    }
+    writeStderr(`Invalid: ${filePath}\n`);
+    writeStderr(result.error.toString() + "\n");
+    return 1;
+  }
+
+  if (command === "normalize") {
+    if (isHelp) {
+      writeStdout(NORMALIZE_USAGE);
+      return 0;
+    }
+    const filePath = positional[0];
+    if (!filePath) {
+      writeStderr("Error: normalize requires a file path\n");
+      return 1;
+    }
+    let data: unknown;
+    try {
+      data = readJson(filePath);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      writeStderr(`${msg}\n`);
+      return 1;
+    }
+    const outputPath = flags.get("--output") as string | undefined;
+    try {
+      const table = normalizeTable(data);
+      writeOutput(tableToJson(table), outputPath);
+      return 0;
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      writeStderr(`Normalization failed: ${msg}\n`);
+      return 1;
+    }
+  }
+
+  if (command === "export") {
+    if (isHelp) {
+      writeStdout(EXPORT_USAGE);
+      return 0;
+    }
+    const filePath = positional[0];
+    if (!filePath) {
+      writeStderr("Error: export requires a file path\n");
+      return 1;
+    }
+    const format = flags.get("--format") as string | undefined;
+    if (!format || !["html", "markdown", "json"].includes(format)) {
+      writeStderr(
+        `Error: --format must be one of: html, markdown, json${format ? ` (got "${format}")` : ""}\n`
+      );
+      return 1;
+    }
+    let data: unknown;
+    try {
+      data = readJson(filePath);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      writeStderr(`${msg}\n`);
+      return 1;
+    }
+    let table;
+    try {
+      table = validateTable(data);
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : String(err);
+      writeStderr(`Invalid DocumentTable: ${msg}\n`);
+      return 1;
+    }
+    const outputPath = flags.get("--output") as string | undefined;
+    let output: string;
+    if (format === "html") {
+      output = tableToHtml(table);
+    } else if (format === "markdown") {
+      output = tableToMarkdown(table).markdown;
+    } else {
+      output = tableToJson(table);
+    }
+    writeOutput(output, outputPath);
+    return 0;
+  }
+
+  writeStderr(`Unknown command: "${command}"\n\n`);
+  writeStdout(USAGE);
+  return 1;
 }
 
-const command = argv[0];
-const { positional, flags } = parseArgs(argv.slice(1));
-const isHelp = flags.has("--help") || flags.has("-h");
-
-if (command === "validate") {
-  if (isHelp) {
-    process.stdout.write(VALIDATE_USAGE);
-    process.exit(0);
-  }
-  const filePath = positional[0];
-  if (!filePath) {
-    process.stderr.write("Error: validate requires a file path\n");
-    process.exit(1);
-  }
-  const data = readJson(filePath);
-  const result = safeValidateTable(data);
-  if (result.success) {
-    process.stdout.write(`Valid: ${filePath}\n`);
-    process.exit(0);
-  } else {
-    process.stderr.write(`Invalid: ${filePath}\n`);
-    process.stderr.write(result.error.toString() + "\n");
-    process.exit(1);
-  }
-} else if (command === "normalize") {
-  if (isHelp) {
-    process.stdout.write(NORMALIZE_USAGE);
-    process.exit(0);
-  }
-  const filePath = positional[0];
-  if (!filePath) {
-    process.stderr.write("Error: normalize requires a file path\n");
-    process.exit(1);
-  }
-  const data = readJson(filePath);
-  const outputPath = flags.get("--output") as string | undefined;
-  try {
-    const table = normalizeTable(data);
-    writeOutput(tableToJson(table), outputPath);
-    process.exit(0);
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
-    process.stderr.write(`Normalization failed: ${msg}\n`);
-    process.exit(1);
-  }
-} else if (command === "export") {
-  if (isHelp) {
-    process.stdout.write(EXPORT_USAGE);
-    process.exit(0);
-  }
-  const filePath = positional[0];
-  if (!filePath) {
-    process.stderr.write("Error: export requires a file path\n");
-    process.exit(1);
-  }
-  const format = flags.get("--format") as string | undefined;
-  if (!format || !["html", "markdown", "json"].includes(format)) {
-    process.stderr.write(
-      `Error: --format must be one of: html, markdown, json${format ? ` (got "${format}")` : ""}\n`
-    );
-    process.exit(1);
-  }
-  const data = readJson(filePath);
-  let table;
-  try {
-    table = validateTable(data);
-  } catch (err) {
-    const msg = err instanceof Error ? err.message : String(err);
-    process.stderr.write(`Invalid DocumentTable: ${msg}\n`);
-    process.exit(1);
-  }
-  const outputPath = flags.get("--output") as string | undefined;
-  let output: string;
-  if (format === "html") {
-    output = tableToHtml(table);
-  } else if (format === "markdown") {
-    output = tableToMarkdown(table).markdown;
-  } else {
-    output = tableToJson(table);
-  }
-  writeOutput(output, outputPath);
-  process.exit(0);
-} else {
-  process.stderr.write(`Unknown command: "${command}"\n\n`);
-  process.stdout.write(USAGE);
-  process.exit(1);
-}
+process.exitCode = main();

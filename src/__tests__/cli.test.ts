@@ -14,7 +14,7 @@ const invalidJsonPath = path.join(tmpdir(), "tpds-test-invalid.json");
 const invalidTablePath = path.join(tmpdir(), "tpds-test-invalid-table.json");
 
 const run = (...args: string[]) =>
-  spawnSync(process.execPath, [cliBin, ...args], { encoding: "utf8" });
+  spawnSync(process.execPath, [cliBin, ...args], { encoding: "utf8", stdio: "pipe" });
 
 beforeAll(() => {
   writeFileSync(invalidJsonPath, "not valid json", "utf8");
@@ -38,6 +38,20 @@ describe("tpds CLI binary", () => {
       expect(result.stdout).toContain("validate");
       expect(result.stdout).toContain("normalize");
       expect(result.stdout).toContain("export");
+    });
+  });
+
+  describe("spawned callers", () => {
+    it("receives stdout when the CLI is invoked through a pipe", () => {
+      const result = run("--help");
+      expect(result.stdout).toContain("Usage: tpds");
+      expect(result.stdout).toContain("export");
+    });
+
+    it("receives stderr when the CLI exits with an error", () => {
+      const result = run("validate", invalidTablePath);
+      expect(result.status).toBe(1);
+      expect(result.stderr).toContain(`Invalid: ${invalidTablePath}`);
     });
   });
 
