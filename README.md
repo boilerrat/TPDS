@@ -90,22 +90,77 @@ console.log(merged.length);
 
 ## Public API
 
+### Functions
+
 ```ts
 import {
-  buildNoteChunks,
-  buildRowChunks,
-  buildSummaryChunk,
-  buildTableChunks,
-  documentTableSchema,
-  inferHeaders,
-  mergeMultiPageTables,
-  normalizeTable,
-  safeValidateTable,
+  // normalization
+  normalizeTable,       // (input: unknown, opts?: NormalizeTableOptions) => DocumentTable
+  inferHeaders,         // (table: DocumentTable) => DocumentTable
+  mergeMultiPageTables, // (tables: DocumentTable[], opts?: MergeMultiPageTablesOptions) => DocumentTable[]
+  // validation
+  validateTable,        // (input: unknown) => DocumentTable  (throws on failure)
+  safeValidateTable,    // (input: unknown) => { success: boolean; data?: DocumentTable; error?: ZodError }
+  // export
+  tableToHtml,          // (table: DocumentTable) => string
+  tableToMarkdown,      // (table: DocumentTable) => MarkdownExportResult
+  tableToJson,          // (table: DocumentTable) => JsonRecord
+  // chunking
+  buildTableChunks,     // (table: DocumentTable, opts?: BuildTableChunksOptions) => TableChunk[]
+  buildRowChunks,       // (table: DocumentTable, opts?: BuildRowChunksOptions) => TableChunk[]
+  buildRowGroupChunks,  // (table: DocumentTable, groupSize: number, opts?: BuildRowChunksOptions) => TableChunk[]
+  buildSummaryChunk,    // (table: DocumentTable) => TableChunk
+  buildNoteChunks,      // (table: DocumentTable) => TableChunk[]
+} from "table-preserving-doc-standard";
+```
+
+### Schemas (Zod)
+
+```ts
+import {
+  documentTableSchema,  // root schema — use with .parse() / .safeParse()
+  tableCellSchema,
+  tableRowSchema,
+  tableColumnSchema,
   tableChunkSchema,
-  tableToHtml,
-  tableToJson,
-  tableToMarkdown,
-  validateTable
+  headerGroupSchema,
+  pageSpanSchema,
+  continuitySchema,
+  provenanceSchema,
+  sourceRefSchema,
+  boundingBoxSchema,
+} from "table-preserving-doc-standard";
+```
+
+### Types
+
+```ts
+import type {
+  // core model
+  DocumentTable,
+  TableCell,
+  TableRow,
+  TableColumn,
+  TableContinuity,
+  HeaderGroup,
+  PageSpan,
+  // chunks
+  TableChunk,
+  TableChunkType,
+  BuildTableChunksOptions,
+  BuildRowChunksOptions,
+  MarkdownExportResult,
+  // shared primitives
+  BoundingBox,
+  CoordinateSpace,
+  JsonRecord,
+  Provenance,
+  RowType,
+  SourceRef,
+  ValueType,
+  // option bags
+  NormalizeTableOptions,
+  MergeMultiPageTablesOptions,
 } from "table-preserving-doc-standard";
 ```
 
