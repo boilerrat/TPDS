@@ -1,0 +1,105 @@
+[
+  {
+    "chunkId": "multipage-table:summary:0",
+    "tableId": "multipage-table",
+    "chunkType": "summary",
+    "text": "Table: Shipment Delays by Port\nSection: Operations > Shipping\nPage Range: 20-21\nCaption: Continuation table across two pages.\nColumns: Port, Average Delay, Primary Cause",
+    "rowIndexes": [],
+    "pages": [
+      20,
+      21
+    ],
+    "sectionPath": [
+      "Operations",
+      "Shipping"
+    ],
+    "title": "Shipment Delays by Port",
+    "caption": "Continuation table across two pages.",
+    "tokenEstimate": 32,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "multipage-table:row:1",
+    "tableId": "multipage-table",
+    "chunkType": "row",
+    "text": "Table: Shipment Delays by Port\nSection: Operations > Shipping\nPage Range: 20-21\n\nRow 1\nPort: Halifax\nAverage Delay: 3 days\nPrimary Cause: Weather",
+    "rowIndexes": [
+      1
+    ],
+    "pages": [
+      20
+    ],
+    "sectionPath": [
+      "Operations",
+      "Shipping"
+    ],
+    "title": "Shipment Delays by Port",
+    "caption": "Continuation table across two pages.",
+    "tokenEstimate": 30,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "multipage-table:row:3",
+    "tableId": "multipage-table",
+    "chunkType": "row",
+    "text": "Table: Shipment Delays by Port\nSection: Operations > Shipping\nPage Range: 20-21\n\nRow 3\nPort: Montreal\nAverage Delay: 5 days\nPrimary Cause: Labor disruption",
+    "rowIndexes": [
+      3
+    ],
+    "pages": [
+      21
+    ],
+    "sectionPath": [
+      "Operations",
+      "Shipping"
+    ],
+    "title": "Shipment Delays by Port",
+    "caption": "Continuation table across two pages.",
+    "tokenEstimate": 32,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "multipage-table:row-group:1-3",
+    "tableId": "multipage-table",
+    "chunkType": "row-group",
+    "text": "Table: Shipment Delays by Port\nSection: Operations > Shipping\nPage Range: 20-21\n\nRow 1\nPort: Halifax\nAverage Delay: 3 days\nPrimary Cause: Weather\n\nTable: Shipment Delays by Port\nSection: Operations > Shipping\nPage Range: 20-21\n\nRow 3\nPort: Montreal\nAverage Delay: 5 days\nPrimary Cause: Labor disruption",
+    "rowIndexes": [
+      1,
+      3
+    ],
+    "pages": [
+      20,
+      21
+    ],
+    "sectionPath": [
+      "Operations",
+      "Shipping"
+    ],
+    "title": "Shipment Delays by Port",
+    "caption": "Continuation table across two pages.",
+    "tokenEstimate": 62,
+    "sourceRefs": [],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  },
+  {
+    "chunkId": "multipage-table:notes:0",
+    "tableId": "multipage-table",
+    "chunkType": "notes",
+    "text": "Notes:\n- Repeated header rows on continuation pages should not become new logical data rows.",
+    "rowIndexes": [],
+    "pages": [
+      20,
+      21
+    ],
+    "sectionPath": [
+      "Operations",
+      "Shipping"
+    ],
+    "title": "Shipment Delays by Port",
+    "caption": "Continuation table across two pages.",
+    "tokenEstimate": 20,
+    "sourceRefs": []
+  }
+]
