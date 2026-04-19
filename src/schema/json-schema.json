@@ -1,0 +1,444 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "standardVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "tableId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceDocumentId": {
+      "type": "string"
+    },
+    "sourceFileName": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "caption": {
+      "type": "string"
+    },
+    "sectionPath": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "footnotes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 9007199254740991
+      }
+    },
+    "pageSpans": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "page": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "bbox": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "coordinateSpace": {
+                "type": "string",
+                "enum": [
+                  "pdf",
+                  "image",
+                  "normalized"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "page"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "columns": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "colIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "label": {
+            "type": "string"
+          },
+          "inferredLabelPath": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "units": {
+            "type": "string"
+          },
+          "metadata": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {}
+          }
+        },
+        "required": [
+          "colIndex"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "rowIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "rowType": {
+            "type": "string",
+            "enum": [
+              "header",
+              "body",
+              "footer",
+              "note"
+            ]
+          },
+          "cellIds": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "repeatedHeaderRow": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "rowIndex",
+          "cellIds"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "cells": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cellId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "rowIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "colIndex": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "textRaw": {
+            "type": "string"
+          },
+          "textNormalized": {
+            "type": "string"
+          },
+          "isHeader": {
+            "type": "boolean"
+          },
+          "headerLevel": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "rowSpan": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "colSpan": {
+            "type": "integer",
+            "exclusiveMinimum": 0,
+            "maximum": 9007199254740991
+          },
+          "inferredHeaders": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "units": {
+            "type": "string"
+          },
+          "valueType": {
+            "type": "string",
+            "enum": [
+              "text",
+              "number",
+              "currency",
+              "percent",
+              "date",
+              "boolean",
+              "mixed"
+            ]
+          },
+          "bbox": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              },
+              "width": {
+                "type": "number"
+              },
+              "height": {
+                "type": "number"
+              },
+              "coordinateSpace": {
+                "type": "string",
+                "enum": [
+                  "pdf",
+                  "image",
+                  "normalized"
+                ]
+              }
+            },
+            "required": [
+              "x",
+              "y",
+              "width",
+              "height"
+            ],
+            "additionalProperties": false
+          },
+          "page": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "sourceRefs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "page": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 9007199254740991
+                },
+                "extractor": {
+                  "type": "string"
+                },
+                "extractorVersion": {
+                  "type": "string"
+                },
+                "confidence": {
+                  "type": "number",
+                  "minimum": 0,
+                  "maximum": 1
+                }
+              },
+              "required": [
+                "page"
+              ],
+              "additionalProperties": false
+            }
+          },
+          "metadata": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {}
+          }
+        },
+        "required": [
+          "cellId",
+          "rowIndex",
+          "colIndex",
+          "textRaw",
+          "textNormalized"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "headerGroups": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "groupId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "label": {
+            "type": "string",
+            "minLength": 1
+          },
+          "level": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "colStart": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          },
+          "colEnd": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 9007199254740991
+          }
+        },
+        "required": [
+          "groupId",
+          "label",
+          "level",
+          "colStart",
+          "colEnd"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    },
+    "continuity": {
+      "type": "object",
+      "properties": {
+        "isMultiPage": {
+          "type": "boolean"
+        },
+        "continuedFromPreviousPage": {
+          "type": "boolean"
+        },
+        "continuesOnNextPage": {
+          "type": "boolean"
+        },
+        "logicalTableGroupId": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "isMultiPage"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "step": {
+            "type": "string",
+            "minLength": 1
+          },
+          "tool": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "step"
+        ],
+        "additionalProperties": false
+      }
+    },
+    "fidelityWarnings": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "merged-cells-present",
+          "headers-inferred",
+          "markdown-lossy",
+          "repeated-headers-detected",
+          "ocr-noise-suspected",
+          "multi-page-merged"
+        ]
+      }
+    }
+  },
+  "required": [
+    "standardVersion",
+    "tableId",
+    "pages",
+    "columns",
+    "rows",
+    "cells"
+  ],
+  "additionalProperties": false
+}
