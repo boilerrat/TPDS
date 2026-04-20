@@ -19,10 +19,16 @@ export const sortCells = (cells: TableCell[]): TableCell[] =>
 export const cellsById = (table: DocumentTable): Map<string, TableCell> =>
   new Map(table.cells.map((cell) => [cell.cellId, cell]));
 
-export const cellsForRow = (table: DocumentTable, row: TableRow): TableCell[] => {
-  const cellMap = cellsById(table);
+export const buildCellMap = cellsById;
+
+export const cellsForRow = (
+  table: DocumentTable,
+  row: TableRow,
+  cellMap?: Map<string, TableCell>
+): TableCell[] => {
+  const map = cellMap ?? cellsById(table);
   return row.cellIds
-    .map((cellId) => cellMap.get(cellId))
+    .map((cellId) => map.get(cellId))
     .filter((cell): cell is TableCell => Boolean(cell))
     .sort((left, right) => left.colIndex - right.colIndex);
 };
@@ -40,5 +46,13 @@ export const collectSourceRefs = (cells: TableCell[]): SourceRef[] => {
   return [...refs.values()].sort((left, right) => left.page - right.page);
 };
 
-export const maxColumnIndex = (table: DocumentTable): number =>
-  Math.max(-1, ...table.columns.map((column) => column.colIndex), ...table.cells.map((cell) => cell.colIndex));
+export const maxColumnIndex = (table: DocumentTable): number => {
+  let max = -1;
+  for (const column of table.columns) {
+    if (column.colIndex > max) max = column.colIndex;
+  }
+  for (const cell of table.cells) {
+    if (cell.colIndex > max) max = cell.colIndex;
+  }
+  return max;
+};

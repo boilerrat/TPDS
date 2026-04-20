@@ -138,4 +138,19 @@ describe("mergeMultiPageTables", () => {
     expect(withDefault).toHaveLength(1);
     expect(withFalse).toHaveLength(2);
   });
+
+  it("unions fidelityWarnings from all pages in a merge group", () => {
+    const continuity = { isMultiPage: true, logicalTableGroupId: "grp-warnings" };
+    const base = makeTable("warn-1", "doc-w", "Report", [1], {
+      continuity,
+      fidelityWarnings: ["headers-inferred"]
+    });
+    const cont = makeTable("warn-2", "doc-w", "Report", [2], {
+      continuity,
+      fidelityWarnings: ["merged-cells-present"]
+    });
+    const result = mergeMultiPageTables([base, cont]);
+    expect(result[0]?.fidelityWarnings).toContain("headers-inferred");
+    expect(result[0]?.fidelityWarnings).toContain("merged-cells-present");
+  });
 });

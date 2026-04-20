@@ -1,6 +1,7 @@
 import type { DocumentTable, FidelityWarning } from "../types/table";
 
 const OCR_EDIT_DISTANCE_THRESHOLD = 1;
+const MAX_LEVENSHTEIN_LEN = 500;
 
 function levenshtein(a: string, b: string): number {
   const m = a.length;
@@ -42,6 +43,8 @@ export function addFidelityWarnings(table: DocumentTable): DocumentTable {
     table.cells.some(
       (c) =>
         c.textRaw !== c.textNormalized &&
+        c.textRaw.length <= MAX_LEVENSHTEIN_LEN &&
+        c.textNormalized.length <= MAX_LEVENSHTEIN_LEN &&
         levenshtein(c.textRaw, c.textNormalized) > OCR_EDIT_DISTANCE_THRESHOLD
     )
   ) {
@@ -52,8 +55,9 @@ export function addFidelityWarnings(table: DocumentTable): DocumentTable {
     warnings.add("multi-page-merged");
   }
 
+  const merged = new Set([...(table.fidelityWarnings ?? []), ...warnings]);
   return {
     ...table,
-    fidelityWarnings: warnings.size > 0 ? [...warnings] : []
+    fidelityWarnings: merged.size > 0 ? [...merged] : []
   };
 }

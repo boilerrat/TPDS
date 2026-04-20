@@ -52,4 +52,11 @@ describe("normalizeFromMarker", () => {
     expect(() => normalizeFromMarker(42)).toThrow();
     expect(() => normalizeFromMarker({})).toThrow();
   });
+
+  it("string path preserves caption option", () => {
+    const markdown =
+      "| A | B |\n|---|---|\n| 1 | 2 |";
+    const table = normalizeFromMarker(markdown, { caption: "My Caption" });
+    expect(table.caption).toBe("My Caption");
+  });
 });

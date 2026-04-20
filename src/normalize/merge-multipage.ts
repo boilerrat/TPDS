@@ -78,7 +78,7 @@ export const mergeMultiPageTables = (
       return [base];
     }
 
-    let maxRowIndex = Math.max(-1, ...base.rows.map((row) => row.rowIndex));
+    let maxRowIndex = base.rows.reduce((max, row) => Math.max(max, row.rowIndex), -1);
     const mergedRows = [...base.rows];
     const mergedCells = [...base.cells];
 
@@ -87,8 +87,10 @@ export const mergeMultiPageTables = (
       const offset = offsetTable(table, rowOffset, base.tableId);
       mergedRows.push(...offset.rows);
       mergedCells.push(...offset.cells);
-      maxRowIndex = Math.max(maxRowIndex, ...offset.rows.map((row) => row.rowIndex));
+      maxRowIndex = offset.rows.reduce((max, row) => Math.max(max, row.rowIndex), maxRowIndex);
     }
+
+    const allWarnings = [...new Set(sortedGroup.flatMap((t) => t.fidelityWarnings ?? []))];
 
     return [{
       ...base,
@@ -107,7 +109,8 @@ export const mergeMultiPageTables = (
         continuedFromPreviousPage: base.continuity?.continuedFromPreviousPage,
         continuesOnNextPage: sortedGroup[sortedGroup.length - 1]?.continuity?.continuesOnNextPage
       },
-      provenance: sortedGroup.flatMap((table) => table.provenance ?? [])
+      provenance: sortedGroup.flatMap((table) => table.provenance ?? []),
+      fidelityWarnings: allWarnings.length > 0 ? allWarnings : undefined
     }];
   });
 };

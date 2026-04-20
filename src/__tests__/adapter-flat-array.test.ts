@@ -65,4 +65,29 @@ describe("normalizeFromFlatArray", () => {
     expect(table.tableId).toBe("my-table-id");
     expect(table.title).toBe("My Table");
   });
+
+  it("non-string cell values are coerced to strings without throwing", () => {
+    const rows = [[1, 2], [3, 4]] as unknown as string[][];
+    expect(() => normalizeFromFlatArray(rows)).not.toThrow();
+    const table = normalizeFromFlatArray(rows);
+    expect(table.cells.find((c) => c.rowIndex === 1 && c.colIndex === 0)?.textRaw).toBe("3");
+  });
+
+  it("null cell values coerce to empty string", () => {
+    const rows = [[null, "a"]] as unknown as string[][];
+    const table = normalizeFromFlatArray(rows);
+    expect(table.cells.find((c) => c.colIndex === 0)?.textRaw).toBe("");
+  });
+
+  it("jagged rows emit jagged-rows-detected fidelity warning", () => {
+    const rows = [["A", "B", "C"], ["x", "y"]] as string[][];
+    const table = normalizeFromFlatArray(rows);
+    expect(table.fidelityWarnings).toContain("jagged-rows-detected");
+  });
+
+  it("uniform rows do not emit jagged-rows-detected", () => {
+    const rows = [["A", "B"], ["x", "y"]];
+    const table = normalizeFromFlatArray(rows);
+    expect(table.fidelityWarnings ?? []).not.toContain("jagged-rows-detected");
+  });
 });

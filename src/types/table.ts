@@ -68,7 +68,8 @@ export type FidelityWarning =
   | "markdown-lossy"
   | "repeated-headers-detected"
   | "ocr-noise-suspected"
-  | "multi-page-merged";
+  | "multi-page-merged"
+  | "jagged-rows-detected";
 
 export type DocumentTable = {
   standardVersion: string;

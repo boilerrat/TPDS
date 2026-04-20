@@ -1,17 +1,19 @@
 import type { DocumentTable, TableRow } from "../types/table";
 import { escapeHtml } from "../utils/text";
-import { cellsForRow, sortRows } from "../utils/table";
+import { buildCellMap, cellsForRow, sortRows } from "../utils/table";
 
-const renderRows = (table: DocumentTable, rows: TableRow[], cellTag: "td" | "th"): string =>
-  rows
+const renderRows = (table: DocumentTable, rows: TableRow[], cellTag: "td" | "th"): string => {
+  const cellMap = buildCellMap(table);
+  return rows
     .map((row) => {
-      const cells = cellsForRow(table, row);
+      const cells = cellsForRow(table, row, cellMap);
       const cellsHtml = cells
         .map((cell) => {
           const tag = cell.isHeader || cellTag === "th" ? "th" : "td";
           const rowSpan = (cell.rowSpan ?? 1) > 1 ? ` rowspan="${cell.rowSpan}"` : "";
           const colSpan = (cell.colSpan ?? 1) > 1 ? ` colspan="${cell.colSpan}"` : "";
-          const scope = tag === "th" ? ` scope="${row.rowType === "header" ? "col" : "row"}"` : "";
+          const isFooterRow = row.rowType === "footer" || row.rowType === "note";
+          const scope = tag === "th" && !isFooterRow ? ` scope="${row.rowType === "header" ? "col" : "row"}"` : "";
           return `    <${tag}${rowSpan}${colSpan}${scope}>${escapeHtml(cell.textNormalized)}</${tag}>`;
         })
         .join("\n");
@@ -19,6 +21,7 @@ const renderRows = (table: DocumentTable, rows: TableRow[], cellTag: "td" | "th"
       return `  <tr>\n${cellsHtml}\n  </tr>`;
     })
     .join("\n");
+};
 
 export const tableToHtml = (table: DocumentTable): string => {
   const rows = sortRows(table.rows);

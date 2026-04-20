@@ -29,8 +29,10 @@ export type BuildTableChunksOptions = BuildRowChunksOptions & {
   includeNotesChunk?: boolean;
 };
 
+export type MarkdownWarning = "markdown-lossy-fallback";
+
 export type MarkdownExportResult = {
   markdown: string;
   fidelity: "lossless" | "lossy";
-  warnings: string[];
+  warnings: MarkdownWarning[];
 };
