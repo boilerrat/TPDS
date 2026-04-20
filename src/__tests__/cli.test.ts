@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { existsSync, readFileSync, writeFileSync, unlinkSync } from "node:fs";
+import { existsSync, readFileSync, rmSync, writeFileSync, unlinkSync } from "node:fs";
 import { tmpdir } from "node:os";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -13,6 +13,7 @@ const npmBin = process.platform === "win32" ? "npm.cmd" : "npm";
 
 const invalidJsonPath = path.join(tmpdir(), "tpds-test-invalid.json");
 const invalidTablePath = path.join(tmpdir(), "tpds-test-invalid-table.json");
+const evalOutDir = path.join(tmpdir(), "tpds-eval-out");
 
 const run = (...args: string[]) =>
   spawnSync(process.execPath, [cliBin, ...args], { encoding: "utf8", stdio: "pipe" });
@@ -20,23 +21,22 @@ const run = (...args: string[]) =>
 beforeAll(() => {
   writeFileSync(invalidJsonPath, "not valid json", "utf8");
   writeFileSync(invalidTablePath, JSON.stringify({ foo: "bar" }), "utf8");
-  if (!existsSync(cliBin)) {
-    const build = spawnSync(npmBin, ["run", "build"], {
-      cwd: rootDir,
-      encoding: "utf8",
-      stdio: "pipe",
-    });
-    if (build.status !== 0) {
-      throw new Error(
-        `Failed to build CLI test fixture.\nstdout:\n${build.stdout}\nstderr:\n${build.stderr}`
-      );
-    }
+  const build = spawnSync(npmBin, ["run", "build"], {
+    cwd: rootDir,
+    encoding: "utf8",
+    stdio: "pipe",
+  });
+  if (build.status !== 0) {
+    throw new Error(
+      `Failed to build CLI test fixture.\nstdout:\n${build.stdout}\nstderr:\n${build.stderr}`
+    );
   }
 });
 
 afterAll(() => {
   if (existsSync(invalidJsonPath)) unlinkSync(invalidJsonPath);
   if (existsSync(invalidTablePath)) unlinkSync(invalidTablePath);
+  if (existsSync(evalOutDir)) rmSync(evalOutDir, { recursive: true, force: true });
 });
 
 describe("tpds CLI binary", () => {
@@ -171,6 +171,47 @@ describe("tpds CLI binary", () => {
     it("exits 1 when file does not exist", () => {
       const result = run("export", "/tmp/tpds-no-such-file.json", "--format", "html");
       expect(result.status).toBe(1);
+    });
+  });
+
+  describe("eval", () => {
+    it("writes a real-world eval bundle for a canonical fixture", () => {
+      const result = run(
+        "eval",
+        simpleFixture,
+        "--output-dir",
+        evalOutDir,
+        "--pdf-title",
+        "Simple Fixture PDF",
+        "--source-url",
+        "https://example.com/simple.pdf",
+        "--evaluator",
+        "Test Runner"
+      );
+      expect(result.status).toBe(0);
+      expect(existsSync(path.join(evalOutDir, "normalized.json"))).toBe(true);
+      expect(existsSync(path.join(evalOutDir, "export.html"))).toBe(true);
+      expect(existsSync(path.join(evalOutDir, "export.md"))).toBe(true);
+      expect(existsSync(path.join(evalOutDir, "export.markdown.json"))).toBe(true);
+      expect(existsSync(path.join(evalOutDir, "chunks.json"))).toBe(true);
+      expect(existsSync(path.join(evalOutDir, "report.md"))).toBe(true);
+
+      const markdownMeta = JSON.parse(
+        readFileSync(path.join(evalOutDir, "export.markdown.json"), "utf8")
+      ) as { fidelity: string; warnings: string[] };
+      expect(markdownMeta.fidelity).toBe("lossless");
+      expect(markdownMeta.warnings).toEqual([]);
+
+      const report = readFileSync(path.join(evalOutDir, "report.md"), "utf8");
+      expect(report).toContain("Simple Fixture PDF");
+      expect(report).toContain("Table detection coverage");
+      expect(report).toContain("Chunk counts:");
+    });
+
+    it("exits 1 when --output-dir is missing", () => {
+      const result = run("eval", simpleFixture);
+      expect(result.status).toBe(1);
+      expect(result.stderr).toContain("--output-dir");
     });
   });
 
