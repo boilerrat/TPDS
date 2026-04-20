@@ -41,6 +41,42 @@ EPSCA resources pages on April 19, 2026:
 This is intentionally a starter corpus, not the full EPSCA universe. The goal
 is to decide whether TPDS is safe to publish first, then expand coverage later.
 
+## How to run it now
+
+TPDS still does not extract tables from PDFs by itself. The intended flow is:
+
+1. run your upstream extractor on one EPSCA PDF and save the extractor JSON
+2. feed that JSON into `tpds eval` with the matching adapter
+3. review the generated artifacts and complete the rubric in the generated
+   `report.md`
+
+Example using a Docling-shaped JSON export:
+
+```bash
+npm run build
+node dist/cli.js eval /path/to/docling-table.json \
+  --adapter docling \
+  --output-dir docs/evals/epsca-wage-reference-guide \
+  --pdf-title "Wage Schedule Reference Guide.pdf" \
+  --source-url "https://www.epsca.org/wage-schedules" \
+  --access-date 2026-04-19 \
+  --evaluator "Your Name" \
+  --extractor "docling" \
+  --extractor-command "docling pipeline revision or command here"
+```
+
+That writes:
+
+- `normalized.json`
+- `export.html`
+- `export.md`
+- `export.markdown.json`
+- `chunks.json`
+- `report.md`
+
+Checking the finished bundle into `docs/evals/...` satisfies the release-gate
+requirement that at least one evaluation summary lives under `docs/`.
+
 ## What TPDS currently preserves well
 
 - Header grouping survives in canonical JSON through `headerGroups` and

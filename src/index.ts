@@ -44,6 +44,12 @@ export { buildRowChunks } from "./chunk/build-row-chunks";
 export { buildSummaryChunk } from "./chunk/build-summary-chunk";
 export type { BuildRowGroupChunksOptions } from "./chunk/build-table-chunks";
 export { buildRowGroupChunks, buildTableChunks } from "./chunk/build-table-chunks";
+export type {
+  EvalAdapter,
+  GenerateRealWorldEvalOptions,
+  GenerateRealWorldEvalResult
+} from "./eval/generate-real-world-eval";
+export { generateRealWorldEval } from "./eval/generate-real-world-eval";
 export { tableToHtml } from "./export/to-html";
 export { tableToJson } from "./export/to-json";
 export { tableToMarkdown } from "./export/to-markdown";
