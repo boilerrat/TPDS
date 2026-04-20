@@ -1,9 +1,5 @@
-let idCounter = 0;
-
-export const createId = (prefix: string): string => {
-  idCounter += 1;
-  return `${prefix}-${idCounter.toString(36)}`;
-};
+export const createId = (prefix: string): string =>
+  `${prefix}-${Math.random().toString(36).slice(2, 9)}`;
 
 export const createCellId = (tableId: string, rowIndex: number, colIndex: number): string =>
   `${tableId}:r${rowIndex}c${colIndex}`;

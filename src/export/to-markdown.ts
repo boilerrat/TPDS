@@ -1,14 +1,15 @@
 import type { MarkdownExportResult } from "../types/chunk";
 import type { DocumentTable, TableRow } from "../types/table";
 import { escapeMarkdownCell, formatPageRange, joinSectionPath, normalizeText } from "../utils/text";
-import { cellsForRow, maxColumnIndex, sortRows } from "../utils/table";
+import { buildCellMap, cellsForRow, maxColumnIndex, sortRows } from "../utils/table";
 
 const rowMatrix = (table: DocumentTable, rows: TableRow[]): string[][] => {
   const width = maxColumnIndex(table) + 1;
+  const cellMap = buildCellMap(table);
 
   return rows.map((row) => {
     const values = Array.from({ length: width }, () => "");
-    for (const cell of cellsForRow(table, row)) {
+    for (const cell of cellsForRow(table, row, cellMap)) {
       values[cell.colIndex] = escapeMarkdownCell(cell.textNormalized);
     }
     return values;

@@ -120,7 +120,7 @@ describe("chunk builders", () => {
     } satisfies DocumentTable;
 
     expect(buildRowChunks(table).map((chunk) => chunk.rowIndexes)).toEqual([[1]]);
-    expect(buildRowGroupChunks(table, 5).map((chunk) => chunk.rowIndexes)).toEqual([[1]]);
+    expect(buildRowGroupChunks(table, { rowGroupSize: 5 }).map((chunk) => chunk.rowIndexes)).toEqual([[1]]);
   });
 
   it("buildRowGroupChunks produces ceil(bodyRows/groupSize) chunks with correct rowIndexes", () => {
@@ -128,7 +128,7 @@ describe("chunk builders", () => {
     const bodyRowCount = table.rows.filter(
       (r) => r.rowType !== "header" && r.rowType !== "note" && !r.repeatedHeaderRow
     ).length;
-    const chunks = buildRowGroupChunks(table, 3);
+    const chunks = buildRowGroupChunks(table, { rowGroupSize: 3 });
     expect(chunks).toHaveLength(Math.ceil(bodyRowCount / 3));
     expect(chunks[0]?.rowIndexes).toEqual([1, 2]);
   });
@@ -164,5 +164,16 @@ describe("chunk builders", () => {
       expect(Number.isInteger(chunk.tokenEstimate)).toBe(true);
       expect(chunk.tokenEstimate).toBeGreaterThan(0);
     }
+  });
+
+  it("buildRowGroupChunks throws RangeError when rowGroupSize < 1", () => {
+    const table = loadFixture("simple-table");
+    expect(() => buildRowGroupChunks(table, { rowGroupSize: 0 })).toThrow(RangeError);
+    expect(() => buildRowGroupChunks(table, { rowGroupSize: -1 })).toThrow(RangeError);
+  });
+
+  it("buildRowGroupChunks with default options does not throw", () => {
+    const table = loadFixture("simple-table");
+    expect(() => buildRowGroupChunks(table)).not.toThrow();
   });
 });

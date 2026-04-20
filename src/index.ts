@@ -2,6 +2,7 @@ export type {
   BuildRowChunksOptions,
   BuildTableChunksOptions,
   MarkdownExportResult,
+  MarkdownWarning,
   TableChunk,
   TableChunkType
 } from "./types/chunk";
@@ -41,6 +42,7 @@ export {
 export { buildNoteChunks } from "./chunk/build-note-chunks";
 export { buildRowChunks } from "./chunk/build-row-chunks";
 export { buildSummaryChunk } from "./chunk/build-summary-chunk";
+export type { BuildRowGroupChunksOptions } from "./chunk/build-table-chunks";
 export { buildRowGroupChunks, buildTableChunks } from "./chunk/build-table-chunks";
 export { tableToHtml } from "./export/to-html";
 export { tableToJson } from "./export/to-json";
@@ -61,8 +63,13 @@ export { normalizeFromMarker } from "./adapters/from-marker";
 import { documentTableSchema } from "./schema/zod";
 import type { DocumentTable } from "./types/table";
 
+/** Parses and validates input as a DocumentTable; throws ZodError on invalid input. */
 export const validateTable = (input: unknown): DocumentTable => documentTableSchema.parse(input);
 
-export const safeValidateTable = (input: unknown) => documentTableSchema.safeParse(input);
+/** Validates input as a DocumentTable without throwing; returns a success/error discriminated union. */
+export const safeValidateTable = (
+  input: unknown
+): ReturnType<typeof documentTableSchema.safeParse> =>
+  documentTableSchema.safeParse(input);
 
 export { default as documentTableJsonSchema } from "./schema/json-schema.json";

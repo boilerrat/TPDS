@@ -34,6 +34,7 @@ export function normalizeFromFlatArray(
     throw new Error("normalizeFromFlatArray: rows must not be empty");
   }
   const colCount = firstRow.length;
+  const hasJaggedRows = rows.some((row) => row !== undefined && row.length !== colCount);
 
   const cells: Record<string, unknown>[] = [];
   const rowObjects: unknown[] = [];
@@ -45,7 +46,7 @@ export function normalizeFromFlatArray(
     const isHeaderRow = firstRowIsHeader && rowIndex === 0;
     const rowType = isHeaderRow ? "header" : "body";
     for (let colIndex = 0; colIndex < colCount; colIndex++) {
-      const textRaw = row[colIndex] ?? "";
+      const textRaw = String(row[colIndex] ?? "");
       cells.push({
         rowIndex,
         colIndex,
@@ -78,5 +79,12 @@ export function normalizeFromFlatArray(
   if (sectionPath !== undefined) raw["sectionPath"] = sectionPath;
   if (standardVersion !== undefined) raw["standardVersion"] = standardVersion;
 
-  return normalizeTable(raw);
+  const result = normalizeTable(raw);
+  if (hasJaggedRows) {
+    return {
+      ...result,
+      fidelityWarnings: [...(result.fidelityWarnings ?? []), "jagged-rows-detected"]
+    };
+  }
+  return result;
 }

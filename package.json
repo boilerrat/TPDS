@@ -19,8 +19,7 @@
   },
   "files": [
     "dist",
-    "README.md",
-    "src/schema/json-schema.json"
+    "README.md"
   ],
   "sideEffects": false,
   "engines": {

@@ -43,6 +43,7 @@ export function normalizeFromMarker(
     const existing = table.fidelityWarnings ?? [];
     return {
       ...table,
+      caption: options.caption ?? table.caption,
       fidelityWarnings: existing.includes("markdown-lossy")
         ? existing
         : [...existing, "markdown-lossy"],

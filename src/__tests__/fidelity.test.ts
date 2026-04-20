@@ -212,4 +212,34 @@ describe("addFidelityWarnings", () => {
     const warnings = result.fidelityWarnings ?? [];
     expect(new Set(warnings).size).toBe(warnings.length);
   });
+
+  it("does not flag ocr-noise-suspected when either string exceeds MAX_LEVENSHTEIN_LEN", () => {
+    const long = "x".repeat(1000);
+    const table: DocumentTable = {
+      ...baseTable,
+      cells: [
+        { ...baseTable.cells[0]!, textRaw: long, textNormalized: long.slice(0, 999) + "y" },
+        ...baseTable.cells.slice(1)
+      ]
+    };
+    const result = addFidelityWarnings(table);
+    expect(result.fidelityWarnings ?? []).not.toContain("ocr-noise-suspected");
+  });
+
+  it("preserves existing fidelityWarnings when adding new ones", () => {
+    const table: DocumentTable = {
+      ...baseTable,
+      fidelityWarnings: ["headers-inferred"],
+      continuity: { isMultiPage: true }
+    };
+    const result = addFidelityWarnings(table);
+    expect(result.fidelityWarnings).toContain("headers-inferred");
+    expect(result.fidelityWarnings).toContain("multi-page-merged");
+  });
+
+  it("does not lose manually-set warning when no auto-detection fires", () => {
+    const table: DocumentTable = { ...baseTable, fidelityWarnings: ["markdown-lossy"] };
+    const result = addFidelityWarnings(table);
+    expect(result.fidelityWarnings).toContain("markdown-lossy");
+  });
 });

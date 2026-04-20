@@ -88,7 +88,8 @@ export const fidelityWarningSchema = z.enum([
   "markdown-lossy",
   "repeated-headers-detected",
   "ocr-noise-suspected",
-  "multi-page-merged"
+  "multi-page-merged",
+  "jagged-rows-detected"
 ]);
 
 export const documentTableSchema = z.object({
