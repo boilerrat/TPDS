@@ -9,6 +9,7 @@ const rootDir = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../.
 const cliBin = path.join(rootDir, "dist", "cli.js");
 const fixturesDir = path.join(rootDir, "src", "fixtures");
 const simpleFixture = path.join(fixturesDir, "simple-table.json");
+const npmBin = process.platform === "win32" ? "npm.cmd" : "npm";
 
 const invalidJsonPath = path.join(tmpdir(), "tpds-test-invalid.json");
 const invalidTablePath = path.join(tmpdir(), "tpds-test-invalid-table.json");
@@ -19,6 +20,18 @@ const run = (...args: string[]) =>
 beforeAll(() => {
   writeFileSync(invalidJsonPath, "not valid json", "utf8");
   writeFileSync(invalidTablePath, JSON.stringify({ foo: "bar" }), "utf8");
+  if (!existsSync(cliBin)) {
+    const build = spawnSync(npmBin, ["run", "build"], {
+      cwd: rootDir,
+      encoding: "utf8",
+      stdio: "pipe",
+    });
+    if (build.status !== 0) {
+      throw new Error(
+        `Failed to build CLI test fixture.\nstdout:\n${build.stdout}\nstderr:\n${build.stderr}`
+      );
+    }
+  }
 });
 
 afterAll(() => {
