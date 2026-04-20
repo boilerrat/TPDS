@@ -31,6 +31,17 @@ describe("tableToMarkdown", () => {
     expect(result.markdown).toContain("Clinical Trial Outcomes");
   });
 
+  it.each(["wage-schedule-colspan", "wage-schedule-rowspan"])(
+    "%s falls back to structured markdown for EPSCA-style wage schedules",
+    (fixtureName) => {
+      const result = tableToMarkdown(loadFixture(fixtureName));
+      expect(result.fidelity).toBe("lossy");
+      expect(result.warnings).toContain("markdown-lossy-fallback");
+      expect(result.markdown).toContain("Table:");
+      expect(result.markdown).toContain("Footnotes:");
+    }
+  );
+
   it("produces valid markdown for body-only tables without throwing", () => {
     const bodyOnly: DocumentTable = {
       standardVersion: "1.0.0",

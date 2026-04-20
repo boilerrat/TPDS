@@ -1,0 +1,356 @@
+[
+  {
+    "chunkId": "wage-schedule-rowspan:summary:0",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "summary",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\nCaption: Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.\nColumns: Trade, Classification, Jan 1 2024, Jan 1 2025, Jan 1 2026*, Vac. Pay†",
+    "rowIndexes": [],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 67,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:1",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 1\nTrade: Boilermaker\nClassification: Journeyman\nJan 1 2024: 51.50\nJan 1 2025: 53.05\nJan 1 2026*: 54.64\nVac. Pay†: 10%",
+    "rowIndexes": [
+      1
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 50,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:2",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 2\nTrade: \nClassification: 3rd Period Apprentice (75%)\nJan 1 2024: 38.63\nJan 1 2025: 39.79\nJan 1 2026*: 40.98\nVac. Pay†: 8%",
+    "rowIndexes": [
+      2
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:3",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 3\nTrade: \nClassification: 2nd Period Apprentice (65%)\nJan 1 2024: 33.48\nJan 1 2025: 34.48\nJan 1 2026*: 35.52\nVac. Pay†: 6%",
+    "rowIndexes": [
+      3
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:4",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 4\nTrade: \nClassification: 1st Period Apprentice (55%)\nJan 1 2024: 28.33\nJan 1 2025: 29.18\nJan 1 2026*: 30.05\nVac. Pay†: 6%",
+    "rowIndexes": [
+      4
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:5",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 5\nTrade: Pipefitter\nClassification: Journeyman\nJan 1 2024: 53.20\nJan 1 2025: 54.80\nJan 1 2026*: 56.44\nVac. Pay†: 10%",
+    "rowIndexes": [
+      5
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 50,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:6",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 6\nTrade: \nClassification: 3rd Period Apprentice (75%)\nJan 1 2024: 39.90\nJan 1 2025: 41.10\nJan 1 2026*: 42.33\nVac. Pay†: 8%",
+    "rowIndexes": [
+      6
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:7",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 7\nTrade: \nClassification: 2nd Period Apprentice (65%)\nJan 1 2024: 34.58\nJan 1 2025: 35.62\nJan 1 2026*: 36.69\nVac. Pay†: 6%",
+    "rowIndexes": [
+      7
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:8",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 8\nTrade: \nClassification: 1st Period Apprentice (55%)\nJan 1 2024: 29.26\nJan 1 2025: 30.14\nJan 1 2026*: 31.04\nVac. Pay†: 6%",
+    "rowIndexes": [
+      8
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:9",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 9\nTrade: Carpenter\nClassification: Journeyman\nJan 1 2024: 48.75\nJan 1 2025: 50.21\nJan 1 2026*: 51.72\nVac. Pay†: 10%",
+    "rowIndexes": [
+      9
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 50,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:10",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 10\nTrade: \nClassification: Foreman (+15%)\nJan 1 2024: 56.06\nJan 1 2025: 57.74\nJan 1 2026*: 59.48\nVac. Pay†: 10%",
+    "rowIndexes": [
+      10
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 50,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:11",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 11\nTrade: \nClassification: 2nd Period Apprentice (65%)\nJan 1 2024: 31.69\nJan 1 2025: 32.64\nJan 1 2026*: 33.62\nVac. Pay†: 6%",
+    "rowIndexes": [
+      11
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 52,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row:12",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 12\nTrade: \nClassification: N/A\nJan 1 2024: N/A\nJan 1 2025: N/A\nJan 1 2026*: N/A\nVac. Pay†: N/A",
+    "rowIndexes": [
+      12
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 49,
+    "sourceRefs": []
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row-group:1-5",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row-group",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 1\nTrade: Boilermaker\nClassification: Journeyman\nJan 1 2024: 51.50\nJan 1 2025: 53.05\nJan 1 2026*: 54.64\nVac. Pay†: 10%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 2\nTrade: \nClassification: 3rd Period Apprentice (75%)\nJan 1 2024: 38.63\nJan 1 2025: 39.79\nJan 1 2026*: 40.98\nVac. Pay†: 8%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 3\nTrade: \nClassification: 2nd Period Apprentice (65%)\nJan 1 2024: 33.48\nJan 1 2025: 34.48\nJan 1 2026*: 35.52\nVac. Pay†: 6%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 4\nTrade: \nClassification: 1st Period Apprentice (55%)\nJan 1 2024: 28.33\nJan 1 2025: 29.18\nJan 1 2026*: 30.05\nVac. Pay†: 6%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 5\nTrade: Pipefitter\nClassification: Journeyman\nJan 1 2024: 53.20\nJan 1 2025: 54.80\nJan 1 2026*: 56.44\nVac. Pay†: 10%",
+    "rowIndexes": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 255,
+    "sourceRefs": [],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row-group:6-10",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row-group",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 6\nTrade: \nClassification: 3rd Period Apprentice (75%)\nJan 1 2024: 39.90\nJan 1 2025: 41.10\nJan 1 2026*: 42.33\nVac. Pay†: 8%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 7\nTrade: \nClassification: 2nd Period Apprentice (65%)\nJan 1 2024: 34.58\nJan 1 2025: 35.62\nJan 1 2026*: 36.69\nVac. Pay†: 6%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 8\nTrade: \nClassification: 1st Period Apprentice (55%)\nJan 1 2024: 29.26\nJan 1 2025: 30.14\nJan 1 2026*: 31.04\nVac. Pay†: 6%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 9\nTrade: Carpenter\nClassification: Journeyman\nJan 1 2024: 48.75\nJan 1 2025: 50.21\nJan 1 2026*: 51.72\nVac. Pay†: 10%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 10\nTrade: \nClassification: Foreman (+15%)\nJan 1 2024: 56.06\nJan 1 2025: 57.74\nJan 1 2026*: 59.48\nVac. Pay†: 10%",
+    "rowIndexes": [
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 255,
+    "sourceRefs": [],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:row-group:11-12",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "row-group",
+    "text": "Table: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 11\nTrade: \nClassification: 2nd Period Apprentice (65%)\nJan 1 2024: 31.69\nJan 1 2025: 32.64\nJan 1 2026*: 33.62\nVac. Pay†: 6%\n\nTable: Multi-Trade Wage Schedule — Effective Dates 2024–2026\nSection: Wage Schedules > Multi-Trade Summary\nPage Range: 2\n\nRow 12\nTrade: \nClassification: N/A\nJan 1 2024: N/A\nJan 1 2025: N/A\nJan 1 2026*: N/A\nVac. Pay†: N/A",
+    "rowIndexes": [
+      11,
+      12
+    ],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 101,
+    "sourceRefs": [],
+    "metadata": {
+      "rowGroupSize": 5
+    }
+  },
+  {
+    "chunkId": "wage-schedule-rowspan:notes:0",
+    "tableId": "wage-schedule-rowspan",
+    "chunkType": "notes",
+    "text": "Notes:\n- N/A indicates the classification does not exist within that trade.\n- Apprentice rates expressed as percentage of Journeyman rate for that effective date.\n- Rates shown are base hourly rates; total package includes vacation pay and benefits.\n\nFootnotes:\n- * Rates subject to ratification pending CBA renewal.\n- † Zone 1 (urban) rates shown; Zone 2 differential applies at remote sites.\n\nUnits:\n- Jan 1 2024: $/hr\n- Jan 1 2025: $/hr\n- Jan 1 2026*: $/hr\n- Vac. Pay†: %",
+    "rowIndexes": [],
+    "pages": [
+      2
+    ],
+    "sectionPath": [
+      "Wage Schedules",
+      "Multi-Trade Summary"
+    ],
+    "title": "Multi-Trade Wage Schedule — Effective Dates 2024–2026",
+    "caption": "Base rates by trade and classification across three annual effective dates. Trade group labels span classification rows via rowSpan.",
+    "tokenEstimate": 108,
+    "sourceRefs": []
+  }
+]
